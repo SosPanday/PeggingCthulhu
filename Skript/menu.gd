@@ -30,6 +30,7 @@ func _on_new_run_pressed() -> void:
 	print("Start new Run with")
 	run_startup.type = RunStartup.Type.NEW_RUN
 	get_tree().change_scene_to_packed(RUN_SCENE)
+	
 
 
 func _on_quit_pressed() -> void:
@@ -42,3 +43,10 @@ func _on_h_slider_value_changed(value: float) -> void:
 		AudioServer.set_bus_mute(master_bus, true)
 	else:
 		AudioServer.set_bus_mute(master_bus, false)
+
+
+func _on_check_button_toggled(toggled_on: bool) -> void:
+	if toggled_on == true:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
