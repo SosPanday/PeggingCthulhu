@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cecbixiylsavi"]
+[gd_scene load_steps=8 format=3 uid="uid://cecbixiylsavi"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_8yp80"]
+[ext_resource type="FontFile" uid="uid://drenqvy884xs8" path="res://FONT/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf" id="2_jf6i5"]
 [ext_resource type="AudioStream" uid="uid://ciwmh5guqrkxx" path="res://anime-108841.mp3" id="3_lopbq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_txyc6"]
@@ -48,14 +49,14 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -100.0
-offset_top = -48.0
+offset_top = -68.0
 offset_right = 100.0
-offset_bottom = 102.0
+offset_bottom = 82.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
 
-[node name="Play" type="Button" parent="VBoxContainer"]
+[node name="New Run" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -67,9 +68,9 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_txyc6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4fkrl")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_lkkoo")
 theme_override_styles/normal = SubResource("StyleBoxFlat_2i4x6")
-text = "Play"
+text = "New Run"
 
-[node name="How to Play" type="Button" parent="VBoxContainer"]
+[node name="Continue" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -81,7 +82,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_txyc6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4fkrl")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_lkkoo")
 theme_override_styles/normal = SubResource("StyleBoxFlat_2i4x6")
-text = "How to Play"
+text = "Continue"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -105,15 +106,16 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -100.0
-offset_top = -140.0
+offset_top = -117.0
 offset_right = 100.0
-offset_bottom = -90.0
+offset_bottom = -67.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = -4
+theme_override_fonts/font = ExtResource("2_jf6i5")
 theme_override_font_sizes/font_size = 30
-text = "GameName"
+text = "Cthulhumbus Arcade"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -129,15 +131,16 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -99.5
-offset_top = 114.0
+offset_top = 85.0
 offset_right = 99.5
-offset_bottom = 134.0
+offset_bottom = 105.0
 grow_horizontal = 2
 grow_vertical = 2
 min_value = -30.0
 max_value = 0.0
 
-[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/How to Play" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/New Run" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/New Run" to="." method="_on_new_run_pressed"]
+[connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_how_to_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]

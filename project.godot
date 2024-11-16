@@ -9,28 +9,39 @@
 config_version=5
 
 [application]
+
 config/name="PeggingCthulhu"
 run/main_scene="res://scenes/ui/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
+
 Events="*res://global/events.gd"
 RNG="*res://global/rng.gd"
 Global="*res://global/global.gd"
 
 [display]
+
 window/size/viewport_width=384
 window/size/viewport_height=216
 window/size/resizable=false
+window/size/always_on_top=true
 window/size/window_width_override=1152
 window/size/window_height_override=648
 window/stretch/mode="viewport"
-window/size/always_on_top=true
+
+[dotnet]
+
+project/assembly_name="PeggingCthulhu"
 
 [editor]
 
 version_control/autoload_on_startup=true
+
+[global_group]
+
+ball=""
 
 [input]
 
@@ -70,14 +81,8 @@ flipper_right={
 ]
 }
 
-
-[dotnet]
-project/assembly_name="PeggingCthulhu"
-
-[global_group]
-ball=""
-
 [physics]
+
 common/physics_ticks_per_second=120
 2d/default_gravity=98.0
 
