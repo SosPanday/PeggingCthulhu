@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://dat01e3ievaue"]
+
+[ext_resource type="PackedScene" uid="uid://bqmijx8w1vbho" path="res://Scene/Walls.tscn" id="1_ytmo5"]
+[ext_resource type="PackedScene" uid="uid://mcotvidp7t1p" path="res://Scene/FlipperLeftObj.tscn" id="2_8la58"]
+[ext_resource type="PackedScene" uid="uid://bfohruf3hh4m1" path="res://Scene/Ball.tscn" id="3_5xvnw"]
+[ext_resource type="PackedScene" uid="uid://dbj34bp2kj4q7" path="res://Scene/FlipperRightObj.tscn" id="4_iwpr7"]
+[ext_resource type="PackedScene" uid="uid://fla4mrw7orum" path="res://Scene/box_count.tscn" id="5_7lyrh"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ksffd"]
+friction = 0.9
+bounce = 0.4
+
+[node name="PinBallTable" type="Node2D"]
+
+[node name="Walls2" parent="." instance=ExtResource("1_ytmo5")]
+position = Vector2(131, 46)
+scale = Vector2(1.06074, 0.649841)
+
+[node name="Walls3" parent="." instance=ExtResource("1_ytmo5")]
+position = Vector2(314, 47)
+rotation = 1.5708
+scale = Vector2(1.42846, 1.11381)
+
+[node name="Walls4" parent="." instance=ExtResource("1_ytmo5")]
+position = Vector2(136, 47)
+rotation = 1.5708
+scale = Vector2(1.42056, 1.11728)
+
+[node name="RightFlipper" parent="." instance=ExtResource("4_iwpr7")]
+position = Vector2(302, 276)
+rotation = -0.289725
+scale = Vector2(1.5, 0.893)
+
+[node name="LeftFlipper" parent="." instance=ExtResource("2_8la58")]
+position = Vector2(132, 272)
+rotation = 0.359538
+scale = Vector2(1.5, 0.893)
+
+[node name="static_boxes" type="Node2D" parent="."]
+position = Vector2(133, 146)
+
+[node name="StaticBox" parent="static_boxes" instance=ExtResource("5_7lyrh")]
+position = Vector2(0, 0)
+
+[node name="ball" parent="static_boxes" instance=ExtResource("3_5xvnw")]
+position = Vector2(38, -4)
+physics_material_override = SubResource("PhysicsMaterial_ksffd")
