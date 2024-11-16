@@ -19,6 +19,7 @@ bg_color = Color(0.0313726, 0.0941176, 0.12549, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2i4x6"]
 bg_color = Color(0.533333, 0.752941, 0.439216, 1)
