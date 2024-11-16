@@ -11,7 +11,7 @@ const RUN_SCENE = preload("res://scenes/run/run.tscn")
 
 func _ready() -> void:
 	get_tree().paused = false
-		continue_button.disabled = SaveGame.load_data() == null
+	continue_button.disabled = SaveGame.load_data() == null
 
 
 func _on_continue_pressed() -> void:

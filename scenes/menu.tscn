@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Skript/menu.gd" id="1_lj56l"]
 [ext_resource type="FontFile" uid="uid://drenqvy884xs8" path="res://global/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf" id="2_tdik8"]
 [ext_resource type="Texture2D" uid="uid://bdsm5sfrf5ue6" path="res://art/Postcard_BG.png" id="2_v3eva"]
-[ext_resource type="AudioStream" uid="uid://ciwmh5guqrkxx" path="res://anime-108841.mp3" id="3_5ipyb"]
+[ext_resource type="AudioStream" uid="uid://dsp4v5i1tt734" path="res://Music/MainMenu.wav" id="3_s8ej0"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yxu04"]
 texture = ExtResource("2_v3eva")
@@ -119,7 +119,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_2i4x6")
 text = "Quit"
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_5ipyb")
+stream = ExtResource("3_s8ej0")
 autoplay = true
 
 [node name="HSlider" type="HSlider" parent="."]
