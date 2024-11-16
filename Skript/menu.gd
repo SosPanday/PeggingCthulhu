@@ -6,7 +6,7 @@ const RUN_SCENE = preload("res://scenes/run/run.tscn")
 
 @export var run_startup: RunStartup
 
-@onready var continue_button: Button = %Continue
+@onready var continue_button: Button = $VBoxContainer/Continue
 
 
 func _ready() -> void:
