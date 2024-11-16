@@ -1,18 +1,42 @@
-[gd_scene load_steps=7 format=3 uid="uid://vemxdwi5xx85"]
+[gd_scene load_steps=14 format=3 uid="uid://vemxdwi5xx85"]
 
+[ext_resource type="Script" path="res://Skript/pin_ball_for_sfx_and_music.gd" id="1_433fj"]
 [ext_resource type="PackedScene" uid="uid://bqmijx8w1vbho" path="res://Scene/Walls.tscn" id="1_i2wmf"]
+[ext_resource type="AudioStream" uid="uid://b24022tesnoiy" path="res://Music/Sfx/hitHurt(2).wav" id="2_bux5n"]
 [ext_resource type="PackedScene" uid="uid://dbj34bp2kj4q7" path="res://Scene/FlipperRightObj.tscn" id="2_g3ui5"]
 [ext_resource type="PackedScene" uid="uid://mcotvidp7t1p" path="res://Scene/FlipperLeftObj.tscn" id="3_ucf01"]
 [ext_resource type="PackedScene" uid="uid://bfohruf3hh4m1" path="res://Scene/Ball.tscn" id="4_w24lg"]
 [ext_resource type="PackedScene" uid="uid://dkwd1j4g02x7e" path="res://Scene/bumper.tscn" id="5_0321l"]
+[ext_resource type="Script" path="res://Skript/camera_2d.gd" id="8_aamjr"]
+[ext_resource type="Script" path="res://Scene/user_interface.gd" id="9_6umdd"]
+[ext_resource type="FontFile" uid="uid://drenqvy884xs8" path="res://global/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf" id="10_fuul6"]
+
+[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_wqcoc"]
+format = 1
+loop_mode = 1
+stereo = true
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ksffd"]
 friction = 0.15
 bounce = 0.21
 
+[sub_resource type="Theme" id="Theme_osgfj"]
+default_font = ExtResource("10_fuul6")
+
 [node name="PinBallTable" type="Node2D"]
-position = Vector2(-65, -30)
+position = Vector2(-66, -29)
 scale = Vector2(0.8, 0.8)
+script = ExtResource("1_433fj")
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(131, 46)
+scale = Vector2(1.06074, 0.649841)
+stream = ExtResource("2_bux5n")
+volume_db = -10.306
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+scale = Vector2(1, 1)
+stream = SubResource("AudioStreamWAV_wqcoc")
 
 [node name="Walls2" parent="." instance=ExtResource("1_i2wmf")]
 position = Vector2(131, 46)
@@ -52,3 +76,26 @@ position = Vector2(210, 125)
 
 [node name="Bumper" parent="." instance=ExtResource("5_0321l")]
 position = Vector2(180, 84)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(323.75, 171.25)
+script = ExtResource("8_aamjr")
+
+[node name="UserInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("9_6umdd")
+metadata/_edit_use_anchors_ = true
+
+[node name="ScoreLabel" type="Label" parent="UserInterface"]
+layout_mode = 0
+offset_left = 357.0
+offset_top = 120.0
+offset_right = 425.0
+offset_bottom = 143.0
+scale = Vector2(2.31076, 3.97493)
+theme = SubResource("Theme_osgfj")
+text = "Score: 0"
+metadata/_edit_use_anchors_ = true

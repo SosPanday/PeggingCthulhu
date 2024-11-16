@@ -8,7 +8,7 @@ size = Vector2(70, 6)
 
 [node name="Flipperight--" type="CharacterBody2D"]
 scale = Vector2(0.839999, 1)
-safe_margin = 20.0
+safe_margin = 0.001
 script = ExtResource("1_stwlp")
 
 [node name="Icon" type="Sprite2D" parent="."]
