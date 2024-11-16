@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://cyg0yos467amm"]
+[gd_scene load_steps=17 format=3 uid="uid://cyg0yos467amm"]
 
 [ext_resource type="Script" path="res://Skript/menu.gd" id="1_lj56l"]
-[ext_resource type="FontFile" uid="uid://drenqvy884xs8" path="res://global/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf" id="2_tdik8"]
+[ext_resource type="FontFile" uid="uid://drenqvy884xs8" path="res://FONT/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf" id="2_tdik8"]
 [ext_resource type="Texture2D" uid="uid://bdsm5sfrf5ue6" path="res://art/Postcard_BG.png" id="2_v3eva"]
+[ext_resource type="Texture2D" uid="uid://btdpeduttgg1d" path="res://art/Menubutton.png" id="3_itjwt"]
 [ext_resource type="AudioStream" uid="uid://dsp4v5i1tt734" path="res://Music/MainMenu.wav" id="3_s8ej0"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yxu04"]
@@ -10,36 +11,38 @@ texture = ExtResource("2_v3eva")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_txyc6"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4fkrl"]
-bg_color = Color(0.203922, 0.407843, 0.337255, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_size = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yui5n"]
+texture = ExtResource("3_itjwt")
+modulate_color = Color(0.266667, 0.694118, 0.458824, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbno6"]
-bg_color = Color(0.0313726, 0.0941176, 0.12549, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ai1dl"]
+texture = ExtResource("3_itjwt")
+modulate_color = Color(0.168627, 0.294118, 0.2, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2i4x6"]
-bg_color = Color(0.533333, 0.752941, 0.439216, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_size = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b7k0t"]
+texture = ExtResource("3_itjwt")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkkoo"]
-bg_color = Color(0.537011, 0.537011, 0.537011, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_size = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g052x"]
+texture = ExtResource("3_itjwt")
+modulate_color = Color(0.266667, 0.694118, 0.458824, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i4o1b"]
+texture = ExtResource("3_itjwt")
+modulate_color = Color(0.168627, 0.294118, 0.2, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2dsew"]
+texture = ExtResource("3_itjwt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1tnqe"]
+texture = ExtResource("3_itjwt")
+modulate_color = Color(0.264971, 0.692266, 0.45687, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e03uv"]
+texture = ExtResource("3_itjwt")
+modulate_color = Color(0.167656, 0.293018, 0.20073, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h004r"]
+texture = ExtResource("3_itjwt")
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -83,12 +86,13 @@ theme_override_colors/font_hover_color = Color(0.878431, 0.972549, 0.815686, 1)
 theme_override_colors/font_pressed_color = Color(0.878431, 0.972549, 0.815686, 1)
 theme_override_colors/font_focus_color = Color(0.878431, 0.972549, 0.815686, 1)
 theme_override_colors/font_color = Color(0.878431, 0.972549, 0.815686, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_fonts/font = ExtResource("2_tdik8")
+theme_override_font_sizes/font_size = 14
 theme_override_styles/focus = SubResource("StyleBoxEmpty_txyc6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_4fkrl")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_xbno6")
-theme_override_styles/normal = SubResource("StyleBoxFlat_2i4x6")
-text = "New Run"
+theme_override_styles/hover = SubResource("StyleBoxTexture_yui5n")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ai1dl")
+theme_override_styles/normal = SubResource("StyleBoxTexture_b7k0t")
+text = "New run"
 
 [node name="Continue" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -97,11 +101,12 @@ theme_override_colors/font_hover_color = Color(0.878431, 0.972549, 0.815686, 1)
 theme_override_colors/font_pressed_color = Color(0.878431, 0.972549, 0.815686, 1)
 theme_override_colors/font_focus_color = Color(0.878431, 0.972549, 0.815686, 1)
 theme_override_colors/font_color = Color(0.878431, 0.972549, 0.815686, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_fonts/font = ExtResource("2_tdik8")
+theme_override_font_sizes/font_size = 14
 theme_override_styles/focus = SubResource("StyleBoxEmpty_txyc6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_4fkrl")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_lkkoo")
-theme_override_styles/normal = SubResource("StyleBoxFlat_2i4x6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_g052x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_i4o1b")
+theme_override_styles/normal = SubResource("StyleBoxTexture_2dsew")
 text = "Continue"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
@@ -111,11 +116,12 @@ theme_override_colors/font_hover_color = Color(0.878431, 0.972549, 0.815686, 1)
 theme_override_colors/font_pressed_color = Color(0.878431, 0.972549, 0.815686, 1)
 theme_override_colors/font_focus_color = Color(0.878431, 0.972549, 0.815686, 1)
 theme_override_colors/font_color = Color(0.878431, 0.972549, 0.815686, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_fonts/font = ExtResource("2_tdik8")
+theme_override_font_sizes/font_size = 14
 theme_override_styles/focus = SubResource("StyleBoxEmpty_txyc6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_4fkrl")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_lkkoo")
-theme_override_styles/normal = SubResource("StyleBoxFlat_2i4x6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1tnqe")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_e03uv")
+theme_override_styles/normal = SubResource("StyleBoxTexture_h004r")
 text = "Quit"
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
@@ -157,7 +163,7 @@ theme_override_colors/font_shadow_color = Color(0.0313726, 0.0941176, 0.12549, 1
 theme_override_constants/shadow_offset_x = -4
 theme_override_fonts/font = ExtResource("2_tdik8")
 theme_override_font_sizes/font_size = 32
-text = "Pegging Cthulu"
+text = "Pegging Cthulhu"
 horizontal_alignment = 1
 vertical_alignment = 1
 

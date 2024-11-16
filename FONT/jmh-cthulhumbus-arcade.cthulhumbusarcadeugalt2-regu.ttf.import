@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://drenqvy884xs8"
-path="res://.godot/imported/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf-368d94d45bcd0cfc0da5d35ac3538c8a.fontdata"
+path="res://.godot/imported/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf-3d38698e3563f9f06a032e201e3ed131.fontdata"
 
 [deps]
 
-source_file="res://global/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf"
-dest_files=["res://.godot/imported/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf-368d94d45bcd0cfc0da5d35ac3538c8a.fontdata"]
+source_file="res://FONT/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf"
+dest_files=["res://.godot/imported/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf-3d38698e3563f9f06a032e201e3ed131.fontdata"]
 
 [params]
 
