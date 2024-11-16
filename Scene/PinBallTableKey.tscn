@@ -1,0 +1,122 @@
+[gd_scene load_steps=8 format=3 uid="uid://djsatl58jo8yd"]
+
+[ext_resource type="PackedScene" uid="uid://bqmijx8w1vbho" path="res://Scene/Walls.tscn" id="1_4w3yk"]
+[ext_resource type="Script" path="res://Scene/orb_progress.gd" id="1_jm4hw"]
+[ext_resource type="PackedScene" uid="uid://dbj34bp2kj4q7" path="res://Scene/FlipperRightObj.tscn" id="2_nkniq"]
+[ext_resource type="PackedScene" uid="uid://mcotvidp7t1p" path="res://Scene/FlipperLeftObj.tscn" id="3_nlkif"]
+[ext_resource type="PackedScene" uid="uid://bfohruf3hh4m1" path="res://Scene/Ball.tscn" id="4_3kqrr"]
+[ext_resource type="PackedScene" uid="uid://cfl73u6wtme47" path="res://Scene/orb.tscn" id="5_ox5hf"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ksffd"]
+friction = 0.15
+bounce = 0.21
+
+[node name="PinBallTable" type="Node2D"]
+position = Vector2(-1, -5)
+script = ExtResource("1_jm4hw")
+
+[node name="Walls2" parent="." instance=ExtResource("1_4w3yk")]
+position = Vector2(131, 46)
+scale = Vector2(1.06074, 0.649841)
+
+[node name="Walls3" parent="." instance=ExtResource("1_4w3yk")]
+position = Vector2(314, 47)
+rotation = 1.5708
+scale = Vector2(1.42846, 1.11381)
+
+[node name="Walls4" parent="." instance=ExtResource("1_4w3yk")]
+position = Vector2(136, 47)
+rotation = 1.5708
+scale = Vector2(1.42056, 1.11728)
+
+[node name="RightFlipper" parent="." instance=ExtResource("2_nkniq")]
+position = Vector2(298, 269)
+rotation = -0.20944
+scale = Vector2(1.5, 0.893)
+
+[node name="LeftFlipper" parent="." instance=ExtResource("3_nlkif")]
+position = Vector2(135, 269)
+rotation = 0.20944
+scale = Vector2(1.5, 0.893)
+
+[node name="ball" parent="." instance=ExtResource("4_3kqrr")]
+z_index = 1
+position = Vector2(151, 84)
+mass = 5.0
+physics_material_override = SubResource("PhysicsMaterial_ksffd")
+gravity_scale = 3.208
+
+[node name="Orbs" type="Node" parent="."]
+
+[node name="Orb" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(191, 58)
+
+[node name="Orb5" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(232, 58)
+
+[node name="Orb2" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(147, 58)
+
+[node name="Orb3" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(211, 58)
+
+[node name="Orb7" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(278, 58)
+
+[node name="Orb8" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(257, 58)
+
+[node name="Orb4" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(168, 58)
+
+[node name="Orb6" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(192, 76)
+
+[node name="Orb9" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(233, 76)
+
+[node name="Orb10" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(148, 76)
+
+[node name="Orb11" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(212, 76)
+
+[node name="Orb12" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(279, 76)
+
+[node name="Orb13" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(258, 76)
+
+[node name="Orb14" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(169, 76)
+
+[node name="Orb15" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(192, 98)
+
+[node name="Orb16" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(233, 98)
+
+[node name="Orb17" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(148, 98)
+
+[node name="Orb18" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(212, 98)
+
+[node name="Orb19" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(279, 98)
+
+[node name="Orb20" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(258, 98)
+
+[node name="Orb21" parent="Orbs" instance=ExtResource("5_ox5hf")]
+position = Vector2(169, 98)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+z_index = -1
+offset_left = 136.0
+offset_top = 120.0
+offset_right = 299.0
+offset_bottom = 133.0
+tooltip_text = "collect the orbs to pass to the next level"
+max_value = 9.0
+show_percentage = false

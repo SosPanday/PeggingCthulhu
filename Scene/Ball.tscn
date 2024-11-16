@@ -11,7 +11,7 @@ radius = 7.07107
 [sub_resource type="CircleShape2D" id="CircleShape2D_tjww8"]
 radius = 8.0
 
-[node name="Ball" type="RigidBody2D"]
+[node name="Ball" type="RigidBody2D" groups=["ball"]]
 physics_material_override = SubResource("PhysicsMaterial_yxywp")
 script = ExtResource("1_bjy7e")
 
