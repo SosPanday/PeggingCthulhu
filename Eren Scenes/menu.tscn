@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://6aiol16utl24"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_8yp80"]
-[ext_resource type="FontFile" uid="uid://drenqvy884xs8" path="res://FONT/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf" id="2_jf6i5"]
+[ext_resource type="Script" path="res://Eren Scripts/menu.gd" id="1_8yp80"]
+[ext_resource type="FontFile" uid="uid://drenqvy884xs8" path="res://global/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf" id="2_jf6i5"]
 [ext_resource type="AudioStream" uid="uid://ciwmh5guqrkxx" path="res://anime-108841.mp3" id="3_lopbq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_txyc6"]
