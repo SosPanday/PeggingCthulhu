@@ -4,7 +4,7 @@ extends Node
 const X_DIST := 30
 const Y_DIST := 25
 const PLACEMENT_RANDOMNESS := 5
-const FLOORS := 16
+const FLOORS := 7
 const MAP_WIDTH := 5
 const PATHS := 6
 const FIGHT_ROOM_WEIGHT := 12.0
