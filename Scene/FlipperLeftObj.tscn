@@ -7,6 +7,7 @@
 size = Vector2(68, 6)
 
 [node name="FlipperLeft--" type="CharacterBody2D"]
+scale = Vector2(0.778372, 0.895942)
 safe_margin = 20.0
 script = ExtResource("1_wqgnk")
 
