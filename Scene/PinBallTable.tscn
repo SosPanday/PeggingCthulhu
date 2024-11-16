@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dat01e3ievaue"]
+[gd_scene load_steps=8 format=3 uid="uid://dat01e3ievaue"]
 
+[ext_resource type="Script" path="res://pin_ball_table.gd" id="1_0klxq"]
 [ext_resource type="PackedScene" uid="uid://bqmijx8w1vbho" path="res://Scene/Walls.tscn" id="1_ytmo5"]
 [ext_resource type="PackedScene" uid="uid://mcotvidp7t1p" path="res://Scene/FlipperLeftObj.tscn" id="2_8la58"]
 [ext_resource type="PackedScene" uid="uid://bfohruf3hh4m1" path="res://Scene/Ball.tscn" id="3_5xvnw"]
@@ -11,6 +12,7 @@ friction = 0.9
 bounce = 0.4
 
 [node name="PinBallTable" type="Node2D"]
+script = ExtResource("1_0klxq")
 
 [node name="Walls2" parent="." instance=ExtResource("1_ytmo5")]
 position = Vector2(131, 15)
