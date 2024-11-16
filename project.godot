@@ -19,7 +19,16 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=640
 window/size/viewport_height=320
-window/size/resizable=false
+window/size/always_on_top=true
+window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="PeggingCthulhu"
+
+[global_group]
+
+ball=""
 
 [input]
 
