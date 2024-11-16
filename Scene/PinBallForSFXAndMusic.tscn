@@ -35,6 +35,7 @@ stream = ExtResource("2_bux5n")
 volume_db = -10.306
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(10, -5)
 scale = Vector2(1, 1)
 stream = SubResource("AudioStreamWAV_wqcoc")
 
