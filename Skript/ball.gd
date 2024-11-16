@@ -1,8 +1,16 @@
-# Ball-Skript (RigidBody2D)
 extends RigidBody2D
 
-# Überprüfe die Kollision mit dem Würfel und ziehe Leben ab
-func _on_Ball_body_entered(body):
-	if body.is_in_group("static_boxes"):  # Überprüfen, ob der Ball mit einem Würfel kollidiert
-		body.take_damage(1)  # Schaden am Würfel (wir reduzieren sein Leben um 1)
-		print("Ball kollidierte mit dem Würfel! Leben des Würfels: ", body.lives)
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	
+	print("Wie sind drinne")
+	if(body.has_method("damage")):
+		print("loeschMich")
+		body.damage()
+	pass # Replace with function body.

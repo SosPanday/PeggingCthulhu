@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbj34bp2kj4q7"]
 
-[ext_resource type="Script" path="res://Skript/flipperright__.gd" id="1_stwlp"]
+[ext_resource type="Script" path="res://Skript/FlipperRightCode.gd" id="1_stwlp"]
 [ext_resource type="Texture2D" uid="uid://cmp5228lrjk81" path="res://icon.svg" id="2_gb8qd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ih0qv"]

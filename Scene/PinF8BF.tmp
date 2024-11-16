@@ -13,18 +13,18 @@ bounce = 0.4
 [node name="PinBallTable" type="Node2D"]
 
 [node name="Walls2" parent="." instance=ExtResource("1_ytmo5")]
-position = Vector2(131, 15)
+position = Vector2(131, 46)
 scale = Vector2(1.06074, 0.649841)
 
 [node name="Walls3" parent="." instance=ExtResource("1_ytmo5")]
-position = Vector2(313, 16)
+position = Vector2(314, 47)
 rotation = 1.5708
-scale = Vector2(1.78846, 1.11381)
+scale = Vector2(1.42846, 1.11381)
 
 [node name="Walls4" parent="." instance=ExtResource("1_ytmo5")]
-position = Vector2(135, 16)
+position = Vector2(136, 47)
 rotation = 1.5708
-scale = Vector2(1.82056, 1.11728)
+scale = Vector2(1.42056, 1.11728)
 
 [node name="RightFlipper" parent="." instance=ExtResource("4_iwpr7")]
 position = Vector2(302, 276)
@@ -36,20 +36,9 @@ position = Vector2(132, 272)
 rotation = 0.359538
 scale = Vector2(1.5, 0.893)
 
+[node name="StaticBox" parent="." instance=ExtResource("5_7lyrh")]
+position = Vector2(202, 172)
+
 [node name="ball" parent="." instance=ExtResource("3_5xvnw")]
 position = Vector2(171, 142)
 physics_material_override = SubResource("PhysicsMaterial_ksffd")
-
-[node name="Boxes" type="Node2D" parent="."]
-position = Vector2(163, 119)
-
-[node name="BoxCount" parent="Boxes" instance=ExtResource("5_7lyrh")]
-position = Vector2(-18, -9)
-rotation = 0.279253
-
-[node name="BoxCount2" parent="Boxes" instance=ExtResource("5_7lyrh")]
-position = Vector2(-3, -7)
-
-[node name="BoxCount3" parent="Boxes" instance=ExtResource("5_7lyrh")]
-position = Vector2(12, -9)
-rotation = -0.279253
