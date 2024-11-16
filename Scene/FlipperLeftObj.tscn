@@ -4,17 +4,17 @@
 [ext_resource type="Script" path="res://Skript/FlipperLeftCode.gd" id="1_wqgnk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iomsk"]
-size = Vector2(52, 4)
+size = Vector2(68, 6)
 
 [node name="FlipperLeft--" type="CharacterBody2D"]
 safe_margin = 20.0
 script = ExtResource("1_wqgnk")
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(27, 0)
-scale = Vector2(0.40832, 0.0300879)
+position = Vector2(34.9338, 0)
+scale = Vector2(0.532285, 0.0300879)
 texture = ExtResource("1_u0kd4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(27, 0)
+position = Vector2(35, 1)
 shape = SubResource("RectangleShape2D_iomsk")
