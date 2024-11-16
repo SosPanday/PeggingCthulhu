@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://bm78xnhy2kl6y"]
+
+[ext_resource type="PackedScene" uid="uid://bfl6inggkqpxy" path="res://Scenes/wall.tscn" id="1_2mucd"]
+[ext_resource type="PackedScene" uid="uid://cw10dtv8kwdfi" path="res://Scenes/ball.tscn" id="2_6a0jc"]
+[ext_resource type="Texture2D" uid="uid://cmp5228lrjk81" path="res://icon.svg" id="3_hany0"]
+[ext_resource type="PackedScene" uid="uid://bf1n06dev1c6a" path="res://Scenes/flipper.tscn" id="4_cw7er"]
+
+[node name="Pinball Game" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 640.0
+offset_bottom = 320.0
+color = Color(0.085, 0.12075, 0.25, 1)
+
+[node name="Playing Field" type="ColorRect" parent="."]
+offset_left = 220.0
+offset_right = 420.0
+offset_bottom = 320.0
+color = Color(0.208, 0.2756, 0.52, 1)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("1_2mucd")]
+position = Vector2(431, 160)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("1_2mucd")]
+position = Vector2(210, 160)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("1_2mucd")]
+position = Vector2(329, -9)
+rotation = 1.5708
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("1_2mucd")]
+position = Vector2(176, 182)
+rotation = -0.668461
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("1_2mucd")]
+position = Vector2(469, 181)
+rotation = 0.668461
+
+[node name="Ball" parent="." instance=ExtResource("2_6a0jc")]
+position = Vector2(309, 87)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball"]
+scale = Vector2(0.171875, 0.177419)
+texture = ExtResource("3_hany0")
+
+[node name="Flipper" parent="." instance=ExtResource("4_cw7er")]
+
+[node name="Flipper2" parent="." instance=ExtResource("4_cw7er")]
+position = Vector2(365, 302)
+is_left_flipper = false

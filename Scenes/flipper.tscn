@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bf1n06dev1c6a"]
+
+[ext_resource type="Script" path="res://scripts/flipper.gd" id="1_ns0cn"]
+[ext_resource type="Texture2D" uid="uid://cmp5228lrjk81" path="res://icon.svg" id="2_1474x"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rcqhf"]
+radius = 4.0
+height = 40.4187
+
+[node name="Flipper" type="CharacterBody2D"]
+position = Vector2(277, 301)
+rotation = 0.179769
+script = ExtResource("1_ns0cn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(19.2094, 0.0200641)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_rcqhf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(19.5, 3.8147e-06)
+scale = Vector2(0.289063, 0.0625001)
+texture = ExtResource("2_1474x")
