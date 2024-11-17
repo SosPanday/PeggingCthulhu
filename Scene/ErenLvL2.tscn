@@ -481,7 +481,7 @@ scale = Vector2(0.171042, 0.178194)
 skew = -0.0343903
 
 [node name="Bumper Rectangle3" parent="Bumpers" instance=ExtResource("14_pkmue")]
-position = Vector2(250.965, 119.626)
+position = Vector2(249.531, 119.626)
 rotation = -0.0235878
 scale = Vector2(0.171042, 0.178194)
 skew = -0.0343903
