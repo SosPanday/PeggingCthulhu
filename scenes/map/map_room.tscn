@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dqvt1s82wu8pu"]
+[gd_scene load_steps=9 format=3 uid="uid://dqvt1s82wu8pu"]
 
 [ext_resource type="Script" path="res://scenes/map/map_room.gd" id="1_1rfj3"]
-[ext_resource type="Texture2D" uid="uid://bfvi02kojsa00" path="res://art/tile_0103.png" id="1_hme85"]
+[ext_resource type="Texture2D" uid="uid://0l3t8tk80lh5" path="res://art/Sword.png" id="2_easwk"]
+[ext_resource type="AudioStream" uid="uid://bgdx0dttdew7w" path="res://Music/Sfx/PencilSoundForMap.wav" id="3_w0q0r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_auf4t"]
 
@@ -77,6 +78,21 @@ tracks/1/keys = {
 "method": &"_on_map_room_selected"
 }]
 }
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_w0q0r")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5oev0"]
 _data = {
@@ -94,16 +110,20 @@ script = ExtResource("1_1rfj3")
 
 [node name="Line2D" type="Line2D" parent="Visuals"]
 modulate = Color(1, 1, 1, 0)
-points = PackedVector2Array(-8, 8, 0, 12, 8, 6, 10, -6, 0, -12, -10, -6)
+z_index = 1
+points = PackedVector2Array(-7, -7, 0, 10, 4, 0, 11, 3, -9, 4, 7, -7, 0, 10, -7, -7, 4, 0)
 closed = true
-width = 2.0
-default_color = Color(0.529412, 0.529412, 0.529412, 1)
+width = 1.5
+default_color = Color(0.0313726, 0.0941176, 0.12549, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
-texture = ExtResource("1_hme85")
+texture = ExtResource("2_easwk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_auf4t")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
