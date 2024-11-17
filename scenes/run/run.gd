@@ -135,14 +135,16 @@ func _regular_room_clear() -> void:
 # Liste von Leveln (Pfad zu den Szenen)
 const levels = [
 	"res://Scene/FirstLevel.tscn",
-	"res://scenes/level2.tscn",
-	"res://scenes/level3.tscn"
+	"res://Scene/ErenLvL.tscn",
 ]
+
+const LEVEL1_SCENE := preload("res://Scene/FirstLevel.tscn")
+const LEVEL2_SCENE := preload("res://Scene/ErenLvL.tscn")
+
 
 func load_random_level():
 	# Randomisieren des Seeds (optional, für echte Zufälligkeit)
 	randomize()
-
 	# Wähle einen zufälligen Index aus der Level-Liste
 	var random_index = randi() % levels.size()
 
@@ -152,7 +154,7 @@ func load_random_level():
 
 	# Wechsle zu dieser Szene
 	if level_scene:
-		get_tree().change_scene(level_path)
+		_change_view(level_scene)
 	else:
 		print("Fehler: Konnte Szene %s nicht laden!" % level_path)
 
@@ -163,7 +165,7 @@ func _on_map_exited(room: Room) -> void:
 	
 	match room.type:
 		Room.Type.ORB:
-			_on_room_entered()
+			load_random_level()
 		Room.Type.HIGHSCORE:
 			_change_view(HIGHSCORE_SCENE)
 		Room.Type.BREAK:
