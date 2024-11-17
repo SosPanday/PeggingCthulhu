@@ -177,6 +177,7 @@ offset_bottom = 33.0
 scale = Vector2(0.593168, 0.795641)
 text = "Fullscreen"
 
+<<<<<<< Updated upstream
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 322.0
@@ -185,6 +186,8 @@ offset_right = 364.0
 offset_bottom = 199.0
 icon = ExtResource("6_e1tnh")
 
+=======
+>>>>>>> Stashed changes
 [connection signal="pressed" from="VBoxContainer/New Run" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/New Run" to="." method="_on_new_run_pressed"]
 [connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_how_to_play_pressed"]
