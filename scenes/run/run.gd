@@ -2,6 +2,13 @@ class_name Run
 extends Node
 
 const CAMPFIRE_SCENE := preload("res://BasicMap.tscn")
+const BATTLE_SCENE := preload("res://BasicMap.tscn")
+const SHOP_SCENE := preload("res://BasicMap.tscn")
+const ENEMY_SCENE := preload("res://Scene/PinBallForSFXAndMusic.tscn")
+const PEGGLE_SCENE := preload("res://scenes/peggle/peggle_0.tscn")
+
+const WIN_SCREEN_SCENE := preload("res://scenes/win_screen/win_screen.tscn")
+const ROOM_CLEAR_SCENE := preload("res://scenes/ui/room_cleared.tscn")
 const MAIN_MENU_PATH := "res://scenes/ui/main_menu.tscn"
 
 var run_startup = Global.run_startup
@@ -14,7 +21,7 @@ var run_startup = Global.run_startup
 @onready var battle_button: Button = %BattleButton
 @onready var campfire_button: Button = %CampfireButton
 @onready var map_button: Button = %MapButton
-@onready var rewards_button: Button = %RewardsButton
+@onready var enemy_button: Button = %EnemyButton
 @onready var shop_button: Button = %ShopButton
 @onready var treasure_button: Button = %TreasureButton
 
@@ -98,14 +105,35 @@ func _show_map() -> void:
 
 
 func _setup_event_connections() -> void:
-	campfire_button.pressed.connect(_change_view.bind(CAMPFIRE_SCENE))
+	enemy_button.pressed.connect(_change_view.bind(ENEMY_SCENE))
 	map_button.pressed.connect(_show_map)
+	Events.map_exited.connect(_on_map_exited)
+	Events.room_cleared.connect(_show_map)
+
+	battle_button.pressed.connect(_change_view.bind(BATTLE_SCENE))
+	campfire_button.pressed.connect(_on_room_cleared)
+	map_button.pressed.connect(_show_map)
+	enemy_button.pressed.connect(_change_view.bind(ENEMY_SCENE))
+	shop_button.pressed.connect(_change_view.bind(SHOP_SCENE))
+	treasure_button.pressed.connect(_change_view.bind(PEGGLE_SCENE))
 
 func _on_room_entered() -> void:
-	_change_view(CAMPFIRE_SCENE)
+	_change_view(ENEMY_SCENE)
+	
+func _on_room_cleared() -> void:
+	if map.floors_climbed == MapGenerator.FLOORS:
+		_change_view(WIN_SCREEN_SCENE)
+		SaveGame.delete_data()
+	else:
+		_regular_room_clear()
+		
+func _regular_room_clear() -> void:
+	_change_view(ROOM_CLEAR_SCENE)
+	
 
 
 func _on_map_exited(room: Room) -> void:
+	print("Room is:", room.type)
 	_save_run(false)
 	
 	match room.type:
@@ -118,4 +146,5 @@ func _on_map_exited(room: Room) -> void:
 		Room.Type.RELAX:
 			_on_room_entered()
 		Room.Type.BOSS:
-			_on_room_entered()
+			_on_room_cleared()
+			
