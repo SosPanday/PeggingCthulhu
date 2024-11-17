@@ -127,6 +127,7 @@ text = "Quit"
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_s8ej0")
+volume_db = -4.04
 autoplay = true
 
 [node name="HSlider" type="HSlider" parent="."]
