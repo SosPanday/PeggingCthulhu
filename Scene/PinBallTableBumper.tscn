@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dbj34bp2kj4q7" path="res://Scene/FlipperRightObj.tscn" id="2_ugk5v"]
 [ext_resource type="PackedScene" uid="uid://mcotvidp7t1p" path="res://Scene/FlipperLeftObj.tscn" id="3_kx8h1"]
 [ext_resource type="PackedScene" uid="uid://bfohruf3hh4m1" path="res://Scene/Ball.tscn" id="4_55ywe"]
-[ext_resource type="PackedScene" uid="uid://dkwd1j4g02x7e" path="res://Scene/bumper_round.tscn" id="5_1ou08"]
+[ext_resource type="PackedScene" path="res://Scene/bumper.tscn" id="5_1ou08"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ksffd"]
 friction = 0.11
@@ -41,6 +41,7 @@ position = Vector2(148, 78)
 mass = 5.0
 physics_material_override = SubResource("PhysicsMaterial_ksffd")
 gravity_scale = 3.208
+max_speed = 600.0
 
 [node name="Bumper2" parent="." instance=ExtResource("5_1ou08")]
 position = Vector2(244, 83)
