@@ -20,9 +20,11 @@ texture = ExtResource("2_fbeia")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_5add7")
+gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource("CircleShape2D_qot04")
+disabled = true
 
 [node name="Area2D" type="Area2D" parent="."]
 

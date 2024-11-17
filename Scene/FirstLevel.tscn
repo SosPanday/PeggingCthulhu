@@ -83,7 +83,6 @@ position = Vector2(0, -3)
 script = ExtResource("1_of45x")
 ball_scene = ExtResource("4_pub8c")
 spawn_position = Vector2(180, 100)
-total_orbs = 54
 
 [node name="HitSound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(192, 110)
