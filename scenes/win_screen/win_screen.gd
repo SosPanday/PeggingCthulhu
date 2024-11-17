@@ -1,7 +1,7 @@
 class_name WinScreen
 extends Control
 
-const MAIN_MENU_PATH = "res://scenes/ui/main_menu.tscn"
+const MAIN_MENU_PATH = "res://scenes/menu.tscn"
 const MESSAGE := "Dread falls where you go \n You've cleared the game."
 
 
