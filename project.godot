@@ -20,6 +20,7 @@ config/icon="res://octopus_pixel.png"
 Events="*res://global/events.gd"
 RNG="*res://global/rng.gd"
 Global="*res://global/global.gd"
+Pegballs="*res://global/pegballs.gd"
 
 [display]
 
