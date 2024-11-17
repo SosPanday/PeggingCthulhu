@@ -11,9 +11,9 @@ const FIGHT_ROOM_WEIGHT := 12.0
 const CAMPFIRE_ROOM_WEIGHT := 4.0
 
 var random_room_type_weights = {
-	Room.Type.ENEMY: 1.0,
-	Room.Type.KEYLOCK: 1.0,
-	Room.Type.CHARGE: 1.0,
+	Room.Type.ORB: 1.0,
+	Room.Type.HIGHSCORE: 1.0,
+	Room.Type.BREAK: 1.0,
 	Room.Type.RELAX: 0.5, # 10% Wahrscheinlichkeit für RELAX
 }
 var random_room_type_total_weight := 100
@@ -133,9 +133,9 @@ func _setup_boss_room() -> void:
 
 
 func _setup_random_room_weights() -> void:
-	random_room_type_weights[Room.Type.KEYLOCK] = FIGHT_ROOM_WEIGHT
-	random_room_type_weights[Room.Type.ENEMY] = FIGHT_ROOM_WEIGHT
-	random_room_type_weights[Room.Type.CHARGE] = FIGHT_ROOM_WEIGHT
+	random_room_type_weights[Room.Type.ORB] = FIGHT_ROOM_WEIGHT
+	random_room_type_weights[Room.Type.HIGHSCORE] = FIGHT_ROOM_WEIGHT
+	random_room_type_weights[Room.Type.BREAK] = FIGHT_ROOM_WEIGHT
 	random_room_type_weights[Room.Type.RELAX] = FIGHT_ROOM_WEIGHT + CAMPFIRE_ROOM_WEIGHT
 	
 
@@ -144,7 +144,7 @@ func _setup_room_types() -> void:
 	# first floor is always a battle
 	for room: Room in map_data[0]:
 		if room.next_rooms.size() > 0:
-				room.type = Room.Type.ENEMY
+				room.type = Room.Type.ORB
 
 	# last floor before the boss is always a campfire
 	for room: Room in map_data[FLOORS - 2]:
@@ -213,4 +213,4 @@ func _get_random_room_type_by_weight() -> Room.Type:
 			return type
 
 	# Fallback, falls etwas schiefgeht (sollte nicht passieren):
-	return Room.Type.ENEMY
+	return Room.Type.ORB

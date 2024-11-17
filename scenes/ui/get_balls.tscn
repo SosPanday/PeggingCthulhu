@@ -1,28 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://gisu34x8ewam"]
+[gd_scene load_steps=5 format=3 uid="uid://dw4hhdheohteo"]
 
-[ext_resource type="Script" path="res://scenes/ui/room_cleared.gd" id="1_46a10"]
+[ext_resource type="Script" path="res://scenes/ui/get_balls.gd" id="1_lharf"]
 
 [sub_resource type="Gradient" id="Gradient_7af3e"]
 colors = PackedColorArray(0.2, 0.117647, 0.0509804, 1, 0.054902, 0, 0.0588235, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_kpysl"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_puoc6"]
 gradient = SubResource("Gradient_7af3e")
 width = 50
 
-[sub_resource type="LabelSettings" id="LabelSettings_cxryo"]
+[sub_resource type="LabelSettings" id="LabelSettings_x6cho"]
 line_spacing = 6.0
 font_size = 12
 shadow_size = 4
 shadow_color = Color(0.54902, 0.443137, 0.376471, 0.333333)
 
-[node name="RoomCleared" type="Control"]
+[node name="GetBalls" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_46a10")
+script = ExtResource("1_lharf")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -31,7 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture1D_kpysl")
+texture = SubResource("GradientTexture1D_puoc6")
 
 [node name="VboxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -51,8 +51,8 @@ theme_override_constants/separation = 20
 [node name="Message" type="Label" parent="VboxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "You've cleared the room"
-label_settings = SubResource("LabelSettings_cxryo")
+text = "You've gained more Balls on your journey!"
+label_settings = SubResource("LabelSettings_x6cho")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -62,10 +62,3 @@ custom_minimum_size = Vector2(60, 14)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Continue"
-
-[node name="MainMenuButton2" type="Button" parent="VboxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(60, 14)
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Main Menu"
