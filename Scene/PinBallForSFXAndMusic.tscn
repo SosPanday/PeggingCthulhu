@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dbj34bp2kj4q7" path="res://Scene/FlipperRightObj.tscn" id="2_g3ui5"]
 [ext_resource type="PackedScene" uid="uid://mcotvidp7t1p" path="res://Scene/FlipperLeftObj.tscn" id="3_ucf01"]
 [ext_resource type="PackedScene" uid="uid://bfohruf3hh4m1" path="res://Scene/Ball.tscn" id="4_w24lg"]
-[ext_resource type="PackedScene" uid="uid://dkwd1j4g02x7e" path="res://Scene/bumper.tscn" id="5_0321l"]
+[ext_resource type="PackedScene" uid="uid://dkwd1j4g02x7e" path="res://Scene/bumper_round.tscn" id="5_0321l"]
 [ext_resource type="Script" path="res://Skript/camera_2d.gd" id="8_aamjr"]
 [ext_resource type="Script" path="res://Scene/user_interface.gd" id="9_6umdd"]
 [ext_resource type="FontFile" uid="uid://drenqvy884xs8" path="res://FONT/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf" id="10_fuul6"]

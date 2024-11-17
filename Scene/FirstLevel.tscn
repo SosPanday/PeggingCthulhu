@@ -1,10 +1,10 @@
-[gd_scene load_steps=30 format=3 uid="uid://de4ohqutl40c6"]
+[gd_scene load_steps=31 format=3 uid="uid://de4ohqutl40c6"]
 
 [ext_resource type="Texture2D" uid="uid://c15kaabpvytvj" path="res://art/TentacleBG.png" id="1_mvcsi"]
 [ext_resource type="Script" path="res://Scene/orb_progress.gd" id="1_of45x"]
 [ext_resource type="PackedScene" uid="uid://b17gf1xmpfypy" path="res://Scene/progress_bar.tscn" id="1_rd2ji"]
 [ext_resource type="PackedScene" uid="uid://mcotvidp7t1p" path="res://Scene/FlipperLeftObj.tscn" id="2_ppbln"]
-[ext_resource type="Texture2D" uid="uid://d3l1nrwyet8k1" path="res://art/Postcard_BG.png" id="2_xoorr"]
+[ext_resource type="Texture2D" uid="uid://bmnkm06iijwwa" path="res://art/Postcard_BG.png" id="2_xoorr"]
 [ext_resource type="AudioStream" uid="uid://b24022tesnoiy" path="res://Music/Sfx/hitHurt(2).wav" id="3_fgfpi"]
 [ext_resource type="PackedScene" uid="uid://dbj34bp2kj4q7" path="res://Scene/FlipperRightObj.tscn" id="3_if68x"]
 [ext_resource type="PackedScene" uid="uid://bfohruf3hh4m1" path="res://Scene/Ball.tscn" id="4_pub8c"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://Skript/camera_2d.gd" id="10_575w4"]
 [ext_resource type="Script" path="res://Scene/user_interface.gd" id="11_xmidk"]
 [ext_resource type="FontFile" uid="uid://drenqvy884xs8" path="res://FONT/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf" id="12_1kceo"]
+[ext_resource type="PackedScene" uid="uid://dkwd1j4g02x7e" path="res://Scene/bumper_round.tscn" id="14_h7414"]
 
 [sub_resource type="AudioStreamWAV" id="AudioStreamWAV_47srj"]
 
@@ -133,6 +134,7 @@ texture = ExtResource("5_aoy6c")
 [node name="Boundaries2" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(0, -1)
 physics_material_override = SubResource("PhysicsMaterial_p76uy")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Boundaries2"]
 position = Vector2(116, 35)
@@ -141,6 +143,7 @@ shape = SubResource("SegmentShape2D_xvkjf")
 [node name="Boundaries3" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(0, -1)
 physics_material_override = SubResource("PhysicsMaterial_p76uy")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Boundaries3"]
 position = Vector2(115, 32)
@@ -149,6 +152,7 @@ shape = SubResource("SegmentShape2D_xumyx")
 [node name="Boundaries4" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(0, -1)
 physics_material_override = SubResource("PhysicsMaterial_p76uy")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Boundaries4"]
 position = Vector2(116, 35)
@@ -156,6 +160,7 @@ shape = SubResource("SegmentShape2D_b7pf8")
 
 [node name="Boundaries5" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(0, -1)
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Boundaries5"]
 position = Vector2(116, 35)
@@ -163,6 +168,7 @@ shape = SubResource("SegmentShape2D_owx42")
 
 [node name="Boundaries6" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(0, -1)
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Boundaries6"]
 position = Vector2(116, 35)
@@ -170,6 +176,7 @@ shape = SubResource("SegmentShape2D_rsa0g")
 
 [node name="Boundaries7" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(0, -1)
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Boundaries7"]
 position = Vector2(116, 35)
@@ -177,6 +184,7 @@ shape = SubResource("SegmentShape2D_puvd8")
 
 [node name="Boundaries8" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(0, -1)
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Boundaries8"]
 position = Vector2(116, 35)
@@ -184,6 +192,7 @@ shape = SubResource("SegmentShape2D_8yyfl")
 
 [node name="Boundaries9" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(0, -1)
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Boundaries9"]
 position = Vector2(116, 35)
@@ -191,6 +200,7 @@ shape = SubResource("SegmentShape2D_8c6og")
 
 [node name="Boundaries10" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(0, -1)
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Boundaries10"]
 position = Vector2(116, 35)
@@ -198,6 +208,7 @@ shape = SubResource("SegmentShape2D_hfuyx")
 
 [node name="Boundaries11" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(0, -1)
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Boundaries11"]
 position = Vector2(116, 35)
@@ -205,6 +216,7 @@ shape = SubResource("SegmentShape2D_0wpck")
 
 [node name="Boundaries12" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(0, -1)
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Boundaries12"]
 position = Vector2(116, 35)
@@ -212,6 +224,7 @@ shape = SubResource("SegmentShape2D_edg2f")
 
 [node name="Boundaries13" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(0, -1)
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Boundaries13"]
 position = Vector2(116, 35)
@@ -219,6 +232,7 @@ shape = SubResource("SegmentShape2D_vemsk")
 
 [node name="Boundaries14" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(0, -1)
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Boundaries14"]
 position = Vector2(116, 35)
@@ -227,13 +241,172 @@ shape = SubResource("SegmentShape2D_hhiej")
 [node name="Orbs" type="Node" parent="."]
 
 [node name="Orb" parent="Orbs" instance=ExtResource("6_1xnrd")]
-position = Vector2(155, 51)
+position = Vector2(162, 147)
+
+[node name="Orb12" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(155, 154)
+
+[node name="Orb13" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(148, 147)
+
+[node name="Orb8" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(148, 133)
+
+[node name="Orb9" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(141, 140)
+
+[node name="Orb10" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(168, 140)
+
+[node name="Orb14" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(174, 133)
+
+[node name="Orb15" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(180, 126)
+
+[node name="Orb16" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(174, 119)
+
+[node name="Orb17" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(170, 110)
+
+[node name="Orb18" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(175, 102)
+
+[node name="Orb19" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(170, 94)
+
+[node name="Orb20" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(177, 88)
+
+[node name="Orb21" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(188, 88)
+
+[node name="Orb21" parent="Orbs/Orb21" instance=ExtResource("6_1xnrd")]
+position = Vector2(189, 88)
+
+[node name="Orb43" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(183, 96)
+
+[node name="Orb21" parent="Orbs/Orb43" instance=ExtResource("6_1xnrd")]
+position = Vector2(189, 88)
+
+[node name="Orb11" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(155, 126)
+
+[node name="Orb22" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(237, 146)
+
+[node name="Orb23" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(216, 96)
+
+[node name="Orb24" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(223, 146)
+
+[node name="Orb25" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(211, 133)
+
+[node name="Orb36" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(205, 126)
+
+[node name="Orb37" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(211, 119)
+
+[node name="Orb38" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(216, 111)
+
+[node name="Orb26" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(217, 139)
+
+[node name="Orb27" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(243, 139)
+
+[node name="Orb28" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(211, 104)
+
+[node name="Orb29" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(233, 103)
+
+[node name="Orb30" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(241, 98)
+
+[node name="Orb41" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(236, 90)
+
+[node name="Orb40" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(152, 101)
+
+[node name="Orb42" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(147, 93)
+
+[node name="Orb39" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(161, 98)
+
+[node name="Orb31" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(200, 88)
+
+[node name="Orb44" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(204, 96)
+
+[node name="Orb32" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(211, 88)
+
+[node name="Orb33" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(225, 99)
+
+[node name="Orb34" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(237, 132)
+
+[node name="Orb35" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(230, 126)
 
 [node name="Orb2" parent="Orbs" instance=ExtResource("6_1xnrd")]
-position = Vector2(227, 51)
+position = Vector2(230, 153)
 
 [node name="Orb3" parent="Orbs" instance=ExtResource("6_1xnrd")]
-position = Vector2(203, 51)
+position = Vector2(192, 42)
+
+[node name="Orb7" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(208, 42)
+
+[node name="Orb6" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(176, 42)
+
+[node name="Orb45" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(175, 64)
+
+[node name="Orb46" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(210, 64)
+
+[node name="Orb52" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(199, 68)
+
+[node name="Orb53" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(199, 78)
+
+[node name="Orb51" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(187, 68)
+
+[node name="Orb54" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(187, 78)
+
+[node name="Orb48" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(224, 64)
+
+[node name="Orb49" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(161, 65)
+
+[node name="Orb50" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(168, 71)
+
+[node name="Orb47" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(217, 70)
+
+[node name="Orb5" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(200, 34)
+
+[node name="Orb4" parent="Orbs" instance=ExtResource("6_1xnrd")]
+position = Vector2(184, 34)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(192, 110)
@@ -268,6 +441,18 @@ scale = Vector2(1.8776, 2.34367)
 theme = SubResource("Theme_aerfv")
 text = "Score: 0"
 metadata/_edit_use_anchors_ = true
+
+[node name="Bumper" parent="." instance=ExtResource("14_h7414")]
+position = Vector2(148, 170)
+
+[node name="Bumper3" parent="." instance=ExtResource("14_h7414")]
+position = Vector2(183, 59)
+
+[node name="Bumper4" parent="." instance=ExtResource("14_h7414")]
+position = Vector2(201, 58)
+
+[node name="Bumper2" parent="." instance=ExtResource("14_h7414")]
+position = Vector2(237, 170)
 
 [connection signal="button_down" from="Button Spawn" to="." method="_on_button_spawn_button_down"]
 [connection signal="button_up" from="Button Spawn" to="." method="_on_button_spawn_button_up"]
