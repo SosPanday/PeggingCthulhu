@@ -2,6 +2,10 @@ class_name Run
 extends Node
 
 const CAMPFIRE_SCENE := preload("res://BasicMap.tscn")
+const BATTLE_SCENE := preload("res://BasicMap.tscn")
+const SHOP_SCENE := preload("res://BasicMap.tscn")
+const ENEMY_SCENE := preload("res://Scene/PinBallForSFXAndMusic.tscn")
+
 const MAIN_MENU_PATH := "res://scenes/ui/main_menu.tscn"
 
 var run_startup = Global.run_startup
@@ -14,7 +18,7 @@ var run_startup = Global.run_startup
 @onready var battle_button: Button = %BattleButton
 @onready var campfire_button: Button = %CampfireButton
 @onready var map_button: Button = %MapButton
-@onready var rewards_button: Button = %RewardsButton
+@onready var enemy_button: Button = %EnemyButton
 @onready var shop_button: Button = %ShopButton
 @onready var treasure_button: Button = %TreasureButton
 
@@ -98,14 +102,22 @@ func _show_map() -> void:
 
 
 func _setup_event_connections() -> void:
+	enemy_button.pressed.connect(_change_view.bind(ENEMY_SCENE))
+	map_button.pressed.connect(_show_map)
+	Events.map_exited.connect(_on_map_exited)
+	
+	battle_button.pressed.connect(_change_view.bind(BATTLE_SCENE))
 	campfire_button.pressed.connect(_change_view.bind(CAMPFIRE_SCENE))
 	map_button.pressed.connect(_show_map)
+	enemy_button.pressed.connect(_change_view.bind(ENEMY_SCENE))
+	shop_button.pressed.connect(_change_view.bind(SHOP_SCENE))
 
 func _on_room_entered() -> void:
-	_change_view(CAMPFIRE_SCENE)
+	_change_view(ENEMY_SCENE)
 
 
 func _on_map_exited(room: Room) -> void:
+	print("Room is:", room.type)
 	_save_run(false)
 	
 	match room.type:
