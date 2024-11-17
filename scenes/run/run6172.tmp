@@ -1,0 +1,218 @@
+[gd_scene load_steps=21 format=3 uid="uid://cfnlpvfc1d862"]
+
+[ext_resource type="PackedScene" uid="uid://cuwuwco4sf0y6" path="res://scenes/map/map.tscn" id="1_7xwwf"]
+[ext_resource type="Script" path="res://scenes/run/run.gd" id="1_bedv1"]
+[ext_resource type="Script" path="res://scenes/run/BallCounterUI.gd" id="4_ruqkt"]
+[ext_resource type="Texture2D" uid="uid://qprv0q3c2uvy" path="res://art/Tube2-Sheet.png" id="4_wok2r"]
+[ext_resource type="Script" path="res://scenes/run/BallUI.gd" id="5_1qlu6"]
+[ext_resource type="Script" path="res://scenes/run/pause_menu.gd" id="11_a4w7h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_68deg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2r8su"]
+atlas = ExtResource("4_wok2r")
+region = Rect2(0, 0, 78, 173)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xchrd"]
+atlas = ExtResource("4_wok2r")
+region = Rect2(78, 0, 78, 173)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwm35"]
+atlas = ExtResource("4_wok2r")
+region = Rect2(156, 0, 78, 173)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yd2m8"]
+atlas = ExtResource("4_wok2r")
+region = Rect2(234, 0, 78, 173)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uq5fq"]
+atlas = ExtResource("4_wok2r")
+region = Rect2(312, 0, 78, 173)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jkqp"]
+atlas = ExtResource("4_wok2r")
+region = Rect2(390, 0, 78, 173)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dbfa"]
+atlas = ExtResource("4_wok2r")
+region = Rect2(468, 0, 78, 173)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vs7o"]
+atlas = ExtResource("4_wok2r")
+region = Rect2(546, 0, 78, 173)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlej8"]
+atlas = ExtResource("4_wok2r")
+region = Rect2(624, 0, 78, 173)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5fti"]
+atlas = ExtResource("4_wok2r")
+region = Rect2(702, 0, 78, 173)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83kr2"]
+atlas = ExtResource("4_wok2r")
+region = Rect2(780, 0, 78, 173)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nesq"]
+atlas = ExtResource("4_wok2r")
+region = Rect2(858, 0, 78, 173)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_77ewf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2r8su")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xchrd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwm35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yd2m8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uq5fq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jkqp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dbfa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vs7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlej8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5fti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83kr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nesq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Run" type="Node" groups=["run"]]
+script = ExtResource("1_bedv1")
+
+[node name="Map" parent="." instance=ExtResource("1_7xwwf")]
+
+[node name="CurrentView" type="Node" parent="."]
+
+[node name="DebugButtons" type="VBoxContainer" parent="."]
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+alignment = 1
+
+[node name="MapButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Map"
+
+[node name="BattleButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Battle"
+
+[node name="ShopButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Shop"
+
+[node name="TreasureButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Treasure"
+
+[node name="EnemyButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Rewards"
+
+[node name="CampfireButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Campfire"
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+process_mode = 3
+layer = 5
+visible = false
+script = ExtResource("11_a4w7h")
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.705882)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -20.0
+offset_right = 47.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+text = "Paused"
+label_settings = SubResource("LabelSettings_68deg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BackToGameButton" type="Button" parent="PauseMenu/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 14)
+layout_mode = 2
+text = "Back"
+
+[node name="SaveAndQuitButton" type="Button" parent="PauseMenu/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "Main Menu"
+
+[node name="TopBar" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="BarItems" type="HBoxContainer" parent="TopBar"]
+custom_minimum_size = Vector2(0, 18)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="Counter" type="Label" parent="TopBar/BarItems"]
+layout_mode = 2
+text = "99"
+horizontal_alignment = 1
+script = ExtResource("4_ruqkt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TopBar/BarItems"]
+position = Vector2(245, 99)
+sprite_frames = SubResource("SpriteFrames_77ewf")
+frame = 10
+frame_progress = 0.161305
+script = ExtResource("5_1qlu6")

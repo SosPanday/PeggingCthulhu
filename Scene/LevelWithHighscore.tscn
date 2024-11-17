@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://mcotvidp7t1p" path="res://Scene/FlipperLeftObj.tscn" id="7_qmjta"]
 [ext_resource type="PackedScene" uid="uid://dbj34bp2kj4q7" path="res://Scene/FlipperRightObj.tscn" id="8_hf8ni"]
 [ext_resource type="Texture2D" uid="uid://oivahydjj28j" path="res://octopus_pixel.png" id="9_vh17g"]
-[ext_resource type="PackedScene" uid="uid://cfl73u6wtme47" path="res://Scene/orb.tscn" id="10_ql6g6"]
+[ext_resource type="PackedScene" uid="uid://dkwd1j4g02x7e" path="res://Scene/bumper_round.tscn" id="10_7cs1j"]
 [ext_resource type="Script" path="res://Skript/camera_2d.gd" id="11_3hr0t"]
 [ext_resource type="Script" path="res://Scene/user_interface.gd" id="12_nl34x"]
 [ext_resource type="FontFile" uid="uid://drenqvy884xs8" path="res://FONT/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf" id="13_0pqvo"]
@@ -80,7 +80,6 @@ position = Vector2(0, -3)
 script = ExtResource("1_54y6u")
 ball_scene = ExtResource("2_w1a2s")
 spawn_position = Vector2(180, 100)
-total_orbs = 3
 
 [node name="HitSound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(192, 110)
@@ -226,15 +225,6 @@ shape = SubResource("SegmentShape2D_hhiej")
 
 [node name="Orbs" type="Node" parent="."]
 
-[node name="Orb" parent="Orbs" instance=ExtResource("10_ql6g6")]
-position = Vector2(155, 51)
-
-[node name="Orb2" parent="Orbs" instance=ExtResource("10_ql6g6")]
-position = Vector2(227, 51)
-
-[node name="Orb3" parent="Orbs" instance=ExtResource("10_ql6g6")]
-position = Vector2(203, 51)
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(192, 110)
 script = ExtResource("11_3hr0t")
@@ -269,5 +259,21 @@ theme = SubResource("Theme_aerfv")
 text = "Score: 0"
 metadata/_edit_use_anchors_ = true
 
+[node name="Bumper" parent="." instance=ExtResource("10_7cs1j")]
+position = Vector2(147, 79)
+scale = Vector2(0.2, 0.2)
+
+[node name="Bumper2" parent="." instance=ExtResource("10_7cs1j")]
+position = Vector2(174, 104)
+
+[node name="Bumper3" parent="." instance=ExtResource("10_7cs1j")]
+position = Vector2(210, 53)
+scale = Vector2(0.2, 0.2)
+
+[node name="Bumper4" parent="." instance=ExtResource("10_7cs1j")]
+position = Vector2(219, 84)
+scale = Vector2(0.3, 0.3)
+
 [connection signal="button_down" from="Button Spawn" to="." method="_on_button_spawn_button_down"]
 [connection signal="button_up" from="Button Spawn" to="." method="_on_button_spawn_button_up"]
+[connection signal="score_updated" from="UserInterface" to="." method="_on_user_interface_score_updated"]
