@@ -6,9 +6,9 @@ signal selected(room: Room)
 
 const ICONS := {
 	Room.Type.NOT_ASSIGNED: [null, Vector2.ONE],
-	Room.Type.ENEMY: [preload("res://art/Sword.png"), Vector2.ONE],
-	Room.Type.KEYLOCK: [preload("res://art/Lock.png"), Vector2.ONE],
-	Room.Type.CHARGE: [preload("res://art/Battery.png"), Vector2.ONE],
+	Room.Type.HIGHSCORE: [preload("res://art/Sword.png"), Vector2.ONE],
+	Room.Type.BREAK: [preload("res://art/Lock.png"), Vector2.ONE],
+	Room.Type.ORB: [preload("res://art/Battery.png"), Vector2.ONE],
 	Room.Type.RELAX: [preload("res://art/Postcard.png"), Vector2.ONE],
 	Room.Type.BOSS: [preload("res://octopus_pixel.png"), Vector2(1.25, 1.25)],
 }

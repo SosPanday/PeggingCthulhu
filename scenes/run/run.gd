@@ -1,15 +1,16 @@
 class_name Run
 extends Node
 
-const CAMPFIRE_SCENE := preload("res://BasicMap.tscn")
-const BATTLE_SCENE := preload("res://BasicMap.tscn")
-const SHOP_SCENE := preload("res://BasicMap.tscn")
-const ENEMY_SCENE := preload("res://Scene/PinBallForSFXAndMusic.tscn")
+const HIGHSCORE_SCENE := preload("res://Scene/LevelWithHighscore.tscn")
+const BREAK_SCENE := preload("res://BasicMap.tscn")
+
+const ORB_SCENE := preload("res://BasicMap.tscn")
 const PEGGLE_SCENE := preload("res://scenes/peggle/peggle_0.tscn")
 
 const WIN_SCREEN_SCENE := preload("res://scenes/win_screen/win_screen.tscn")
 const ROOM_CLEAR_SCENE := preload("res://scenes/ui/room_cleared.tscn")
-const MAIN_MENU_PATH := "res://scenes/ui/main_menu.tscn"
+const GET_BALLS := preload("res://scenes/ui/get_balls.tscn")
+const MAIN_MENU_PATH := "res://scenes/menu.tscn"
 
 var run_startup = Global.run_startup
 
@@ -105,20 +106,20 @@ func _show_map() -> void:
 
 
 func _setup_event_connections() -> void:
-	enemy_button.pressed.connect(_change_view.bind(ENEMY_SCENE))
+	#enemy_button.pressed.connect(_change_view.bind(ENEMY_SCENE))
 	map_button.pressed.connect(_show_map)
 	Events.map_exited.connect(_on_map_exited)
 	Events.room_cleared.connect(_show_map)
 
-	battle_button.pressed.connect(_change_view.bind(BATTLE_SCENE))
-	campfire_button.pressed.connect(_on_room_cleared)
+	#battle_button.pressed.connect(_change_view.bind(BATTLE_SCENE))
+	campfire_button.pressed.connect(_change_view.bind(GET_BALLS))
 	map_button.pressed.connect(_show_map)
-	enemy_button.pressed.connect(_change_view.bind(ENEMY_SCENE))
-	shop_button.pressed.connect(_change_view.bind(SHOP_SCENE))
+	#enemy_button.pressed.connect(_change_view.bind(ENEMY_SCENE))
+	#shop_button.pressed.connect(_change_view.bind(SHOP_SCENE))
 	treasure_button.pressed.connect(_change_view.bind(PEGGLE_SCENE))
 
 func _on_room_entered() -> void:
-	_change_view(ENEMY_SCENE)
+	_change_view(ORB_SCENE)
 	
 func _on_room_cleared() -> void:
 	if map.floors_climbed == MapGenerator.FLOORS:
@@ -131,20 +132,44 @@ func _regular_room_clear() -> void:
 	_change_view(ROOM_CLEAR_SCENE)
 	
 
+# Liste von Leveln (Pfad zu den Szenen)
+const levels = [
+	"res://Scene/FirstLevel.tscn",
+	"res://scenes/level2.tscn",
+	"res://scenes/level3.tscn"
+]
 
+func load_random_level():
+	# Randomisieren des Seeds (optional, für echte Zufälligkeit)
+	randomize()
+
+	# Wähle einen zufälligen Index aus der Level-Liste
+	var random_index = randi() % levels.size()
+
+	# Lade die zufällige Szene
+	var level_path = levels[random_index]
+	var level_scene = load(level_path)
+
+	# Wechsle zu dieser Szene
+	if level_scene:
+		get_tree().change_scene(level_path)
+	else:
+		print("Fehler: Konnte Szene %s nicht laden!" % level_path)
+
+	
 func _on_map_exited(room: Room) -> void:
 	print("Room is:", room.type)
 	_save_run(false)
 	
 	match room.type:
-		Room.Type.ENEMY:
+		Room.Type.ORB:
 			_on_room_entered()
-		Room.Type.KEYLOCK:
-			_on_room_entered()
-		Room.Type.CHARGE:
-			_on_room_entered()
+		Room.Type.HIGHSCORE:
+			_change_view(HIGHSCORE_SCENE)
+		Room.Type.BREAK:
+			_change_view(BREAK_SCENE)
 		Room.Type.RELAX:
-			_on_room_entered()
+			_change_view(GET_BALLS)
 		Room.Type.BOSS:
 			_on_room_cleared()
 			
