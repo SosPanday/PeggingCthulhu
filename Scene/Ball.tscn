@@ -1,33 +1,33 @@
 [gd_scene load_steps=6 format=3 uid="uid://bfohruf3hh4m1"]
 
 [ext_resource type="Script" path="res://Skript/ball.gd" id="1_bjy7e"]
-[ext_resource type="Texture2D" uid="uid://b1qct0vjc7e7j" path="res://Assets/Ball1.png" id="1_ige2e"]
+[ext_resource type="Texture2D" uid="uid://c08h8na6cbbiq" path="res://art/slimeball.png" id="2_tys4e"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yxywp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_abfhq"]
-radius = 7.07107
+radius = 4.95182
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tjww8"]
-radius = 8.0
+radius = 6.77083
 
 [node name="Ball" type="RigidBody2D" groups=["ball"]]
 physics_material_override = SubResource("PhysicsMaterial_yxywp")
 script = ExtResource("1_bjy7e")
 
 [node name="Ball1" type="Sprite2D" parent="."]
-position = Vector2(8, 8)
-texture = ExtResource("1_ige2e")
+position = Vector2(0.5, -0.38)
+texture = ExtResource("2_tys4e")
+offset = Vector2(-1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, 8)
 scale = Vector2(1.00973, 1)
 shape = SubResource("CircleShape2D_abfhq")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(8, 8)
+scale = Vector2(0.85, 0.85)
 shape = SubResource("CircleShape2D_tjww8")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

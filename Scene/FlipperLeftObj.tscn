@@ -1,20 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://mcotvidp7t1p"]
 
-[ext_resource type="Texture2D" uid="uid://cmp5228lrjk81" path="res://icon.svg" id="1_u0kd4"]
 [ext_resource type="Script" path="res://Skript/FlipperLeftCode.gd" id="1_wqgnk"]
+[ext_resource type="Texture2D" uid="uid://b8iobf8mb85s0" path="res://art/TentaclePorn.png" id="2_4qgpu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iomsk"]
-size = Vector2(68, 6)
+size = Vector2(42.5, 7)
 
 [node name="FlipperLeft--" type="CharacterBody2D"]
 safe_margin = 20.0
 script = ExtResource("1_wqgnk")
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(34.9338, 0)
-scale = Vector2(0.532285, 0.0300879)
-texture = ExtResource("1_u0kd4")
+position = Vector2(21, 0)
+texture = ExtResource("2_4qgpu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(35, 1)
+position = Vector2(20.75, 0.5)
 shape = SubResource("RectangleShape2D_iomsk")
