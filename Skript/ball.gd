@@ -9,6 +9,8 @@ func _physics_process(delta):
 		velocity = velocity.normalized() * max_speed
 		linear_velocity = velocity
 
+
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("hit")
 	var main_scene = get_parent()
