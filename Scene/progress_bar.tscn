@@ -23,8 +23,8 @@ gradient = SubResource("Gradient_8ic33")
 
 [node name="ProgressBar" type="ProgressBar"]
 z_index = -1
-offset_right = 163.0
-offset_bottom = 13.0
+offset_right = 98.0
+offset_bottom = 15.0
 tooltip_text = "collect the orbs to pass to the next level"
 theme = SubResource("Theme_rloxk")
 max_value = 9.0

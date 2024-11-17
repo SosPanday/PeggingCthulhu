@@ -3,7 +3,7 @@ extends RigidBody2D
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("hit")
 	var main_scene = get_parent()
-	if main_scene and main_scene.name == "PinBallTable":
+	if main_scene and main_scene.name == "FirstLevel":
 		
 		print("HEHEHEHEHEH") 
 		 # Sicherstellen, dass es die richtige Node ist
