@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkwd1j4g02x7e"]
+
+[ext_resource type="Script" path="res://Skript/bumper.gd" id="1_vf6w4"]
+[ext_resource type="Texture2D" uid="uid://d2pxawj5v45ca" path="res://art/bumper.png" id="2_fbeia"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5add7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qot04"]
+radius = 11.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_12idc"]
+radius = 13.0384
+
+[node name="Bumper" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_vf6w4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fbeia")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_5add7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_qot04")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_12idc")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

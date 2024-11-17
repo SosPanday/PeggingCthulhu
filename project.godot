@@ -26,7 +26,6 @@ Pegballs="*res://global/pegballs.gd"
 
 window/size/viewport_width=384
 window/size/viewport_height=216
-window/size/resizable=false
 window/size/always_on_top=true
 window/size/window_width_override=1152
 window/size/window_height_override=648

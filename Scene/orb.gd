@@ -1,9 +1,9 @@
 extends Node2D
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -15,5 +15,6 @@ func _on_area_2d_body_entered(body: RigidBody2D) -> void:
 	# Check if the colliding body is the ball
 	if body.is_in_group("ball"):
 		print("orb collected")
+		audio_stream_player_2d.play()
 		emit_signal("orb_collected")  # Notify that the orb was collected
 		queue_free()  # Remove the orb from the scene
