@@ -5,7 +5,10 @@ const CAMPFIRE_SCENE := preload("res://BasicMap.tscn")
 const BATTLE_SCENE := preload("res://BasicMap.tscn")
 const SHOP_SCENE := preload("res://BasicMap.tscn")
 const ENEMY_SCENE := preload("res://Scene/PinBallForSFXAndMusic.tscn")
+const PEGGLE_SCENE := preload("res://scenes/peggle/peggle_0.tscn")
 
+const WIN_SCREEN_SCENE := preload("res://scenes/win_screen/win_screen.tscn")
+const ROOM_CLEAR_SCENE := preload("res://scenes/ui/room_cleared.tscn")
 const MAIN_MENU_PATH := "res://scenes/ui/main_menu.tscn"
 
 var run_startup = Global.run_startup
@@ -105,15 +108,28 @@ func _setup_event_connections() -> void:
 	enemy_button.pressed.connect(_change_view.bind(ENEMY_SCENE))
 	map_button.pressed.connect(_show_map)
 	Events.map_exited.connect(_on_map_exited)
-	
+	Events.room_cleared.connect(_show_map)
+
 	battle_button.pressed.connect(_change_view.bind(BATTLE_SCENE))
-	campfire_button.pressed.connect(_change_view.bind(CAMPFIRE_SCENE))
+	campfire_button.pressed.connect(_on_room_cleared)
 	map_button.pressed.connect(_show_map)
 	enemy_button.pressed.connect(_change_view.bind(ENEMY_SCENE))
 	shop_button.pressed.connect(_change_view.bind(SHOP_SCENE))
+	treasure_button.pressed.connect(_change_view.bind(PEGGLE_SCENE))
 
 func _on_room_entered() -> void:
 	_change_view(ENEMY_SCENE)
+	
+func _on_room_cleared() -> void:
+	if map.floors_climbed == MapGenerator.FLOORS:
+		_change_view(WIN_SCREEN_SCENE)
+		SaveGame.delete_data()
+	else:
+		_regular_room_clear()
+		
+func _regular_room_clear() -> void:
+	_change_view(ROOM_CLEAR_SCENE)
+	
 
 
 func _on_map_exited(room: Room) -> void:
@@ -130,4 +146,5 @@ func _on_map_exited(room: Room) -> void:
 		Room.Type.RELAX:
 			_on_room_entered()
 		Room.Type.BOSS:
-			_on_room_entered()
+			_on_room_cleared()
+			

@@ -120,7 +120,6 @@ default_color = Color(0.0313726, 0.0941176, 0.12549, 1)
 texture = ExtResource("2_easwk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("CircleShape2D_auf4t")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
