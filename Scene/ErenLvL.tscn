@@ -240,6 +240,7 @@ shape = SubResource("SegmentShape2D_hhiej")
 [node name="Orbs" type="Node" parent="."]
 
 [node name="Orb" parent="Orbs" instance=ExtResource("10_pmrqx")]
+<<<<<<< Updated upstream
 position = Vector2(181, 107)
 
 [node name="Orb12" parent="Orbs" instance=ExtResource("10_pmrqx")]
@@ -413,6 +414,172 @@ position = Vector2(182, 160)
 
 [node name="Orb4" parent="Orbs" instance=ExtResource("10_pmrqx")]
 position = Vector2(151, 75)
+=======
+position = Vector2(162, 147)
+
+[node name="Orb12" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(155, 154)
+
+[node name="Orb13" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(148, 147)
+
+[node name="Orb8" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(148, 133)
+
+[node name="Orb9" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(141, 140)
+
+[node name="Orb10" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(168, 140)
+
+[node name="Orb14" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(174, 133)
+
+[node name="Orb15" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(180, 126)
+
+[node name="Orb16" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(174, 119)
+
+[node name="Orb17" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(170, 110)
+
+[node name="Orb18" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(175, 102)
+
+[node name="Orb19" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(170, 94)
+
+[node name="Orb20" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(177, 88)
+
+[node name="Orb21" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(188, 88)
+
+[node name="Orb43" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(183, 96)
+
+[node name="Orb11" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(155, 126)
+
+[node name="Orb22" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(237, 146)
+
+[node name="Orb23" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(216, 96)
+
+[node name="Orb24" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(223, 146)
+
+[node name="Orb25" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(211, 133)
+
+[node name="Orb36" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(205, 126)
+
+[node name="Orb37" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(211, 119)
+
+[node name="Orb38" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(216, 111)
+
+[node name="Orb26" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(217, 139)
+
+[node name="Orb27" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(243, 139)
+
+[node name="Orb28" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(211, 104)
+
+[node name="Orb29" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(233, 103)
+
+[node name="Orb30" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(241, 98)
+
+[node name="Orb41" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(236, 90)
+
+[node name="Orb40" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(152, 101)
+
+[node name="Orb42" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(147, 93)
+
+[node name="Orb39" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(156, 103)
+
+[node name="Orb31" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(200, 88)
+
+[node name="Orb44" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(204, 96)
+
+[node name="Orb32" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(205, 47)
+rotation = -0.741373
+
+[node name="Orb33" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(225, 99)
+
+[node name="Orb34" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(237, 132)
+
+[node name="Orb35" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(230, 126)
+
+[node name="Orb2" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(230, 153)
+
+[node name="Orb3" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(168, 48)
+rotation = 2.32049
+
+[node name="Orb7" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(190, 34)
+
+[node name="Orb6" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(151, 66)
+
+[node name="Orb45" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(162, 83)
+
+[node name="Orb46" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(188, 55)
+
+[node name="Orb52" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(183, 48)
+rotation = -0.827336
+
+[node name="Orb53" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(201, 55)
+
+[node name="Orb51" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(176, 48)
+rotation = -0.795014
+
+[node name="Orb54" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(187, 78)
+
+[node name="Orb48" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(199, 62)
+
+[node name="Orb49" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(149, 72)
+
+[node name="Orb50" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(160, 76)
+
+[node name="Orb47" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(190, 63)
+
+[node name="Orb5" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(200, 34)
+
+[node name="Orb4" parent="Orbs" instance=ExtResource("10_pmrqx")]
+position = Vector2(170, 77)
+>>>>>>> Stashed changes
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(192, 110)
@@ -453,13 +620,21 @@ position = Vector2(19, 3)
 scale = Vector2(0.697308, 0.735628)
 
 [node name="Bumper Rectangle" parent="Bumpers" instance=ExtResource("14_vayll")]
+<<<<<<< Updated upstream
 position = Vector2(177.827, 232.454)
+=======
+position = Vector2(182.129, 239.251)
+>>>>>>> Stashed changes
 rotation = -1.93741
 scale = Vector2(0.171042, 0.178194)
 skew = 0.0343902
 
 [node name="Bumper Rectangle2" parent="Bumpers" instance=ExtResource("14_vayll")]
+<<<<<<< Updated upstream
 position = Vector2(319.801, 233.814)
+=======
+position = Vector2(315.499, 239.251)
+>>>>>>> Stashed changes
 rotation = -1.20418
 scale = Vector2(0.171042, 0.178194)
 skew = -0.0343903
