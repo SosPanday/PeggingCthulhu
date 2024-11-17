@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=4 format=3 uid="uid://nna7fyc7h6xr"]
-
-[ext_resource type="Script" path="res://Postcards/skrips/postcards.gd" id="1_8ehab"]
-[ext_resource type="Script" path="res://Postcards/skrips/Inventar.gd" id="2_juho5"]
-[ext_resource type="Resource" uid="uid://cekk0mh4sa6pg" path="res://Postcards/items/Testcard.tres" id="2_mqn6a"]
-
-[resource]
-script = ExtResource("2_juho5")
-items = Array[ExtResource("1_8ehab")]([null, null, ExtResource("2_mqn6a"), null, null])

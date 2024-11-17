@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bfohruf3hh4m1"]
+[gd_scene load_steps=6 format=3 uid="uid://bfohruf3hh4m1"]
 
 [ext_resource type="Script" path="res://Skript/ball.gd" id="1_bjy7e"]
 [ext_resource type="Texture2D" uid="uid://b1qct0vjc7e7j" path="res://Assets/Ball1.png" id="1_ige2e"]
-[ext_resource type="Resource" uid="uid://nna7fyc7h6xr" path="res://Postcards/Inventory_Items.tres" id="2_bbtvu"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yxywp"]
 
@@ -15,7 +14,6 @@ radius = 8.0
 [node name="Ball" type="RigidBody2D" groups=["ball"]]
 physics_material_override = SubResource("PhysicsMaterial_yxywp")
 script = ExtResource("1_bjy7e")
-inv = ExtResource("2_bbtvu")
 
 [node name="Ball1" type="Sprite2D" parent="."]
 position = Vector2(8, 8)

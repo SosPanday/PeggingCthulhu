@@ -1,4 +1,7 @@
 extends Control
 
-@onready var inv: Inventory = preload("res://Postcards/Inventory_Items.tres")
-@onready var slots: Array = new 
+
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")

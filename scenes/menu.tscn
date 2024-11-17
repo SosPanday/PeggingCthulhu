@@ -191,3 +191,4 @@ icon = ExtResource("6_e1tnh")
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="toggled" from="Fullscreen" to="." method="_on_check_button_toggled"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

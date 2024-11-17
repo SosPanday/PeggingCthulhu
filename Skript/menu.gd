@@ -1,6 +1,7 @@
 extends Control
 
 var master_bus = AudioServer.get_bus_index("Master")
+var cards = preload("res://Postcards/Szenen/Inv_UI.tscn")
 
 const RUN_SCENE = preload("res://scenes/run/run.tscn")
 
@@ -12,6 +13,7 @@ const RUN_SCENE = preload("res://scenes/run/run.tscn")
 func _ready() -> void:
 	get_tree().paused = false
 	continue_button.disabled = SaveGame.load_data() == null
+
 
 
 func _on_continue_pressed() -> void:
@@ -50,3 +52,9 @@ func _on_check_button_toggled(toggled_on: bool) -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+
+func _on_button_pressed() -> void:
+
+	get_tree().change_scene_to_file("res://Postcards/Szenen/Inv_UI.tscn")
+	
