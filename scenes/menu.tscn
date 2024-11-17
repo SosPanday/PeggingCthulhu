@@ -164,7 +164,7 @@ theme_override_colors/font_shadow_color = Color(0.0313726, 0.0941176, 0.12549, 1
 theme_override_constants/shadow_offset_x = -4
 theme_override_fonts/font = ExtResource("2_tdik8")
 theme_override_font_sizes/font_size = 32
-text = "Pegging Cthulhu"
+text = "Dreadfall"
 horizontal_alignment = 1
 vertical_alignment = 1
 
