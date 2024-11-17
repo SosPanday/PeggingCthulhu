@@ -1,23 +1,22 @@
 [gd_scene load_steps=6 format=3 uid="uid://dkwd1j4g02x7e"]
 
-[ext_resource type="Texture2D" uid="uid://b1qct0vjc7e7j" path="res://Assets/Ball1.png" id="1_8o14q"]
 [ext_resource type="Script" path="res://Skript/bumper.gd" id="1_vf6w4"]
+[ext_resource type="Texture2D" uid="uid://d2pxawj5v45ca" path="res://art/bumper.png" id="2_fbeia"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5add7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qot04"]
-radius = 15.0
+radius = 11.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_12idc"]
-radius = 16.0312
+radius = 13.0384
 
 [node name="Bumper" type="Node2D"]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_vf6w4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.1, 0.355, 1, 1)
-scale = Vector2(2.25, 2.25)
-texture = ExtResource("1_8o14q")
+texture = ExtResource("2_fbeia")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_5add7")
