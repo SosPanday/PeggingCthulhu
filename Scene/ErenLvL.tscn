@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://Skript/camera_2d.gd" id="11_ppyo2"]
 [ext_resource type="Script" path="res://Scene/user_interface.gd" id="12_2cm41"]
 [ext_resource type="FontFile" uid="uid://drenqvy884xs8" path="res://FONT/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf" id="13_wvpph"]
-[ext_resource type="PackedScene" path="res://Scene/bumper_rectangle.tscn" id="14_vayll"]
+[ext_resource type="PackedScene" uid="uid://brct14ac2qggr" path="res://Scene/bumper_rectangle.tscn" id="14_vayll"]
 
 [sub_resource type="AudioStreamWAV" id="AudioStreamWAV_47srj"]
 
