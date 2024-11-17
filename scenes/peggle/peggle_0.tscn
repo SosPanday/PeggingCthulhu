@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt72r85kj4ljq"]
+
+[ext_resource type="Script" path="res://scenes/peggle/peggle.gd" id="1_n1107"]
+[ext_resource type="PackedScene" uid="uid://bd56473n68ldi" path="res://scenes/peggle/peggle_canon.tscn" id="2_63w8s"]
+
+[node name="Peggle0" type="Node2D"]
+script = ExtResource("1_n1107")
+
+[node name="PeggleCanon" parent="." instance=ExtResource("2_63w8s")]
+position = Vector2(188, 11)

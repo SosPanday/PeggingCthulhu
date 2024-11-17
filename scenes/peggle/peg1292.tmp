@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd56473n68ldi"]
+
+[ext_resource type="Script" path="res://scenes/peggle/peggle_canon.gd" id="1_uu554"]
+[ext_resource type="Texture2D" uid="uid://oivahydjj28j" path="res://octopus_pixel.png" id="2_gormh"]
+[ext_resource type="Script" path="res://scenes/peggle/peggle_shot.gd" id="3_kq864"]
+
+[node name="PeggleCanon" type="Node2D"]
+script = ExtResource("1_uu554")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_gormh")
+
+[node name="Shooter" type="Node2D" parent="."]
+script = ExtResource("3_kq864")
