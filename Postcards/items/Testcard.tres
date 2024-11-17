@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PostCard" load_steps=3 format=3 uid="uid://cekk0mh4sa6pg"]
+
+[ext_resource type="Script" path="res://Postcards/skrips/postcards.gd" id="1_w55g8"]
+[ext_resource type="Texture2D" uid="uid://djmcfvaajlihk" path="res://art/octopus_pixel.png" id="2_qhdfv"]
+
+[resource]
+script = ExtResource("1_w55g8")
+name = "Testcard"
+texture = ExtResource("2_qhdfv")

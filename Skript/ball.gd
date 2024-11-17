@@ -1,5 +1,7 @@
 extends RigidBody2D 
 
+@export var inv: Inventory # Inventar für Postkarten
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("hit")
 	var main_scene = get_parent()
