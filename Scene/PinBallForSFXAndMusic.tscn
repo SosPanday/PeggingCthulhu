@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dkwd1j4g02x7e" path="res://Scene/bumper.tscn" id="5_0321l"]
 [ext_resource type="Script" path="res://Skript/camera_2d.gd" id="8_aamjr"]
 [ext_resource type="Script" path="res://Scene/user_interface.gd" id="9_6umdd"]
-[ext_resource type="FontFile" uid="uid://drenqvy884xs8" path="res://global/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf" id="10_fuul6"]
+[ext_resource type="FontFile" uid="uid://drenqvy884xs8" path="res://FONT/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf" id="10_fuul6"]
 
 [sub_resource type="AudioStreamWAV" id="AudioStreamWAV_wqcoc"]
 format = 1
@@ -36,7 +36,6 @@ volume_db = -10.306
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(10, -5)
-scale = Vector2(1, 1)
 stream = SubResource("AudioStreamWAV_wqcoc")
 
 [node name="Walls2" parent="." instance=ExtResource("1_i2wmf")]
