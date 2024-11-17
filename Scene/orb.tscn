@@ -1,18 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://cfl73u6wtme47"]
 
-[ext_resource type="Texture2D" uid="uid://b1qct0vjc7e7j" path="res://Assets/Ball1.png" id="1_1a5pe"]
 [ext_resource type="Script" path="res://Scene/orb.gd" id="1_vpmy4"]
+[ext_resource type="Texture2D" uid="uid://b1cahesr6ey4j" path="res://art/Collectible.png" id="2_xjcvc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vdd08"]
-radius = 8.0
+radius = 4.0
 
 [node name="Orb" type="Node2D"]
-scale = Vector2(0.25, 0.25)
 script = ExtResource("1_vpmy4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.841033, 0.00153152, 0.96135, 1)
-texture = ExtResource("1_1a5pe")
+texture = ExtResource("2_xjcvc")
 
 [node name="Area2D" type="Area2D" parent="."]
 

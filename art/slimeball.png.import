@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://b3s30k56q3k12"
-=======
-uid="uid://bdsm5sfrf5ue6"
->>>>>>> c6a22a65a4b88f03dd3099f365e4f73344e05848
-path="res://.godot/imported/Postcard_BG.png-ce93f60d86409bba0c55ac4ed227d987.ctex"
+uid="uid://c08h8na6cbbiq"
+path="res://.godot/imported/slimeball.png-4ddce73b9a8a7b0713f3a89f695e9266.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Postcard_BG.png"
-dest_files=["res://.godot/imported/Postcard_BG.png-ce93f60d86409bba0c55ac4ed227d987.ctex"]
+source_file="res://art/slimeball.png"
+dest_files=["res://.godot/imported/slimeball.png-4ddce73b9a8a7b0713f3a89f695e9266.ctex"]
 
 [params]
 

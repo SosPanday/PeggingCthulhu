@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://b17gf1xmpfypy"]
+
+[ext_resource type="Texture2D" uid="uid://bpmv4pjrgvjua" path="res://art/progressbar_empty.png" id="1_ldgu8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_adf30"]
+expand_margin_left = 2048.0
+
+[sub_resource type="Theme" id="Theme_rloxk"]
+ProgressBar/colors/font_color = Color(0, 0, 0, 1)
+ProgressBar/colors/font_outline_color = Color(0, 0, 0, 1)
+ProgressBar/constants/outline_size = 0
+ProgressBar/font_sizes/font_size = 16
+ProgressBar/fonts/font = null
+ProgressBar/styles/background = SubResource("StyleBoxTexture_adf30")
+ProgressBar/styles/fill = null
+
+[sub_resource type="Gradient" id="Gradient_8ic33"]
+offsets = PackedFloat32Array(0, 0.588028, 1)
+colors = PackedColorArray(0.582816, 0.186148, 0.632932, 1, 0.903049, 0.810865, 0.914695, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uv17u"]
+gradient = SubResource("Gradient_8ic33")
+
+[node name="ProgressBar" type="ProgressBar"]
+z_index = -1
+offset_right = 163.0
+offset_bottom = 13.0
+tooltip_text = "collect the orbs to pass to the next level"
+theme = SubResource("Theme_rloxk")
+max_value = 9.0
+show_percentage = false
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 64.0
+texture_under = ExtResource("1_ldgu8")
+texture_progress = SubResource("GradientTexture2D_uv17u")

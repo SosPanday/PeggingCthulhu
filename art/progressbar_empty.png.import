@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://b3s30k56q3k12"
-=======
-uid="uid://bdsm5sfrf5ue6"
->>>>>>> c6a22a65a4b88f03dd3099f365e4f73344e05848
-path="res://.godot/imported/Postcard_BG.png-ce93f60d86409bba0c55ac4ed227d987.ctex"
+uid="uid://bpmv4pjrgvjua"
+path="res://.godot/imported/progressbar_empty.png-eca5c9855c2e4a82785c5e460912016c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Postcard_BG.png"
-dest_files=["res://.godot/imported/Postcard_BG.png-ce93f60d86409bba0c55ac4ed227d987.ctex"]
+source_file="res://art/progressbar_empty.png"
+dest_files=["res://.godot/imported/progressbar_empty.png-eca5c9855c2e4a82785c5e460912016c.ctex"]
 
 [params]
 
