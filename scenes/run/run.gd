@@ -109,6 +109,7 @@ func _setup_event_connections() -> void:
 	#enemy_button.pressed.connect(_change_view.bind(ENEMY_SCENE))
 	map_button.pressed.connect(_show_map)
 	Events.map_exited.connect(_on_map_exited)
+	Events.all_orbs_collected.connect(_on_room_cleared)
 	Events.room_cleared.connect(_show_map)
 
 	#battle_button.pressed.connect(_change_view.bind(BATTLE_SCENE))
@@ -136,10 +137,12 @@ func _regular_room_clear() -> void:
 const levels = [
 	"res://Scene/FirstLevel.tscn",
 	"res://Scene/ErenLvL.tscn",
+	"res://Scene/ErenLvL2.tscn"
 ]
 
 const LEVEL1_SCENE := preload("res://Scene/FirstLevel.tscn")
 const LEVEL2_SCENE := preload("res://Scene/ErenLvL.tscn")
+const LEVEL3_SCENE := preload("res://Scene/ErenLvL2.tscn")
 
 
 func load_random_level():

@@ -1,6 +1,6 @@
 extends Node
 
-@export var balls: int = 5
+@export var balls: int = 12
 
 # Signal für Änderungen der Ballanzahl
 signal ball_count_changed(new_count)

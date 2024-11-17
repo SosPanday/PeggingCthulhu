@@ -109,6 +109,7 @@ script = ExtResource("1_bedv1")
 [node name="CurrentView" type="Node" parent="."]
 
 [node name="DebugButtons" type="VBoxContainer" parent="."]
+visible = false
 anchors_preset = 9
 anchor_bottom = 1.0
 grow_vertical = 2
@@ -206,13 +207,13 @@ grow_horizontal = 2
 
 [node name="Counter" type="Label" parent="TopBar/BarItems"]
 layout_mode = 2
-size_flags_horizontal = 10
+size_flags_horizontal = 2
 text = "99"
 horizontal_alignment = 1
 script = ExtResource("4_ruqkt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TopBar/BarItems"]
-position = Vector2(363.125, 118.505)
+position = Vector2(45.125, 116.505)
 scale = Vector2(1.15705, 1.15705)
 sprite_frames = SubResource("SpriteFrames_77ewf")
 frame = 10
