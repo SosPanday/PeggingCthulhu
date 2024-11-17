@@ -4,7 +4,8 @@ extends StaticBody2D
 
 
 # Called when the node enters the scene tree for the first time.
-
+func _ready() -> void:
+	print("bin in ready BoxCount")
 	
 func damage():
 	if(life >= 1):
@@ -13,4 +14,5 @@ func damage():
 	elif(life < 1):
 		deleteMe()
 func deleteMe():
+	print("bin in der Funktion")
 	queue_free()

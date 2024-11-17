@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://fla4mrw7orum"]
 
+[ext_resource type="Texture2D" uid="uid://cmp5228lrjk81" path="res://icon.svg" id="1_1v5td"]
 [ext_resource type="Script" path="res://Skript/box_count.gd" id="1_4qb1n"]
-[ext_resource type="Texture2D" uid="uid://btdpeduttgg1d" path="res://art/Menubutton.png" id="2_756bc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4dbtb"]
 size = Vector2(128, 56)
@@ -15,6 +15,5 @@ scale = Vector2(0.12, 0.12)
 shape = SubResource("RectangleShape2D_4dbtb")
 
 [node name="BoxImg" type="Sprite2D" parent="."]
-modulate = Color(1.37173e-06, 0.346661, 0.434027, 1)
-scale = Vector2(0.08, 0.13)
-texture = ExtResource("2_756bc")
+scale = Vector2(0.12, 0.05)
+texture = ExtResource("1_1v5td")
