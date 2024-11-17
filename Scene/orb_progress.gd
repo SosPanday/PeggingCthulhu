@@ -15,7 +15,9 @@ func _ready():
 	music_tracks = [
 		preload("res://Music/LevelMusikREAL.wav"),
 		preload("res://Music/PeggLevelTypShitReal.wav"),
-		preload("res://Music/PeggEndBossTypeshit.wav")
+		preload("res://Music/PeggEndBossTypeshit.wav"),
+		preload("res://Music/EndBoss.wav"),
+		preload("res://Music/SongFürNachUnten.wav")
 		]
 	play_random_music()
 	# Connect the orb_collected signal for each orb

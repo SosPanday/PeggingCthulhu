@@ -5,7 +5,7 @@
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yxywp"]
 friction = 0.2
-bounce = 0.7
+bounce = 32.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_abfhq"]
 radius = 4.95182
@@ -14,11 +14,11 @@ radius = 4.95182
 radius = 6.77083
 
 [node name="Ball" type="RigidBody2D" groups=["ball"]]
-mass = 5.0
+mass = 1.101
 physics_material_override = SubResource("PhysicsMaterial_yxywp")
-gravity_scale = 1.3
+gravity_scale = 2.0
 script = ExtResource("1_bjy7e")
-max_speed = 300.0
+max_speed = 250.0
 
 [node name="Ball1" type="Sprite2D" parent="."]
 position = Vector2(0.5, -0.38)
