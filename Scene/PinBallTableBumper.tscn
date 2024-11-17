@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dkwd1j4g02x7e" path="res://Scene/bumper.tscn" id="5_1ou08"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ksffd"]
-friction = 0.15
-bounce = 0.21
+friction = 0.11
+bounce = 0.22
 
 [node name="PinBallTable" type="Node2D"]
 

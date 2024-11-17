@@ -5,17 +5,18 @@
 [ext_resource type="PackedScene" uid="uid://bfohruf3hh4m1" path="res://Scene/Ball.tscn" id="3_5xvnw"]
 [ext_resource type="PackedScene" uid="uid://dbj34bp2kj4q7" path="res://Scene/FlipperRightObj.tscn" id="4_iwpr7"]
 [ext_resource type="PackedScene" uid="uid://fla4mrw7orum" path="res://Scene/box_count.tscn" id="5_7lyrh"]
-[ext_resource type="FontFile" uid="uid://drenqvy884xs8" path="res://global/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf" id="7_cbx86"]
+[ext_resource type="FontFile" uid="uid://drenqvy884xs8" path="res://FONT/jmh-cthulhumbus-arcade.cthulhumbusarcadeugalt2-regu.ttf" id="7_cbx86"]
 [ext_resource type="Script" path="res://Scene/user_interface.gd" id="7_kkoql"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ksffd"]
-friction = 0.9
+friction = 0.0
 bounce = 0.4
 
 [sub_resource type="Theme" id="Theme_jwu81"]
 default_font = ExtResource("7_cbx86")
 
 [node name="PinBallTable" type="Node2D"]
+scale = Vector2(0.531547, 0.661325)
 
 [node name="Walls2" parent="." instance=ExtResource("1_ytmo5")]
 position = Vector2(131, 15)
@@ -43,6 +44,7 @@ scale = Vector2(1.5, 0.893)
 
 [node name="ball" parent="." instance=ExtResource("3_5xvnw")]
 position = Vector2(171, 142)
+mass = 5.532
 physics_material_override = SubResource("PhysicsMaterial_ksffd")
 
 [node name="Boxes" type="Node2D" parent="."]
@@ -65,6 +67,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("7_kkoql")
+metadata/_edit_use_anchors_ = true
 
 [node name="ScoreLabel" type="Label" parent="UserInterface"]
 layout_mode = 0
@@ -75,3 +78,4 @@ offset_bottom = 143.0
 scale = Vector2(2.31076, 3.97493)
 theme = SubResource("Theme_jwu81")
 text = "Score: 0"
+metadata/_edit_use_anchors_ = true
